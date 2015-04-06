@@ -1,0 +1,578 @@
+/*
+				Variable Grid System.
+				Learn more ~ http://www.spry-soft.com/grids/
+				Based on 960 Grid System - http://960.gs/
+			
+				Licensed under GPL and MIT.
+			*/
+			
+			/*
+			  Forces backgrounds to span full width,
+			  even if there is horizontal scrolling.
+			  Increase this if your layout is wider.
+			
+			  Note: IE6 works fine without this fix.
+			*/
+			
+			body {
+			  min-width: 960px; 
+			  height: 100%
+			}
+			
+			/* Custom 
+			---------------------------------------------------------------------------------------------------*/
+			ul {
+			    list-style-type: none; 
+			    width: 100%;
+			    -webkit-padding-start: 0px;
+			    padding-left: 0px;
+			}
+			.clear {clear: both; height: 1px; overflow: hidden;}
+			
+			#logo {
+			    margin-top: 42px;
+			    margin-bottom: 0px;
+			    border-bottom: 1px solid;
+			    border-top: 0px solid;
+			}
+					
+			#logo
+			a:link     {color: rgb(60,60,60);
+			             text-decoration:none;
+			             font-family: 'Dosis', sans-serif;
+			             font-style: normal;
+			             font-weight: 800;
+			             font-size: 1em;
+			            }
+			a:visited {color: rgb(60,60,60);}  /* visited link */
+			a:hover {color: rgb(70,70,70);}  /* mouse over link */
+
+			#logo
+			img {padding-bottom: 10px}
+
+			#logo h2 {
+				font-size: 4em;
+				margin-bottom: 70px;
+			}
+			
+			#menu {
+			    z-index: +3; 
+			    position:relative;
+			    left: 0px;
+                top: -29px;
+            }
+		    #menu a:link, a:visited {color: rgb(60,60,60); background-color: rgb(251,251,251); font-size: 16px; text-decoration:none;}	
+            #menu a:hover {color: rgb(249,88,37); background-color: rgb(251,251,251)}
+            #menu li {display: inline; margin: 0px 0px 0px 0px; padding: 2px 5px 2px 5px; list-style-type: none; border: 0px solid}
+            
+            
+            #submenu {
+			    z-index: +4; 
+			    position:relative;
+			    left: 0px;
+                top: -37px; /* For regulation of distance between menu and submenu */
+            }
+		    #submenu a:link, a:visited {color: rgb(60,60,60); text-decoration: none; background-color: rgb(251,251,251); font-size: 14px}
+            #submenu a:hover {color: rgb(249,88,37); background-color: rgb(251,251,251)}
+            #submenu a.active:link, a.active:visited {color: rgb(249,88,37); text-decoration: none; background-color: rgb(251,251,251); font-size: 14px}	
+            #submenu li {display: inline; margin: 0px 0px 0px 0px; padding: 2px 5px 2px 5px; list-style-type: none; border: 0px solid}
+			
+			#content {
+			    padding-top: 43px;
+			    margin-top: -61px;  /* For regulation of distance between menu and submenu */
+			    padding-bottom: 57px;
+			    border-top: 1px solid;
+			    border-bottom: 1px solid;
+			    height: auto !important;
+			}
+			
+			#footer {
+			    padding: 7px 10px 70px 10px;
+			    margin-bottom: 150px;
+			    z-index: +3; 
+			    position:relative;
+			    left: 0px;
+                top: -13px;
+                background-color: rgb(251,251,251);
+			}
+			
+			#detail-description {
+			    float: right;
+			    text-align: left;
+			    margin-top: 20px;
+			}
+			
+			.items-normal {
+			}
+			
+			.item {
+			    float: left; 
+			    display: block;
+			    width: 225px; height: 330px; 
+			    margin: 0px 20px 2px 0;
+			    padding-top: 0px;
+			    border: 0px solid black;
+			}
+			
+			.item:hover {
+			    border: 0px solid rgb(249,88,37);
+			}
+			
+			.last {
+			    margin: 0px 0px 2px 0;
+			}
+			
+			.description {
+			    font-size: 13px;
+			}
+
+			
+			.item-name {
+			    text-align: left;
+			    margin: 6px 10px 0px 0px;
+			    font-size: 14px;
+			}
+			
+			.item-price {
+			    text-align: left;
+			    margin: 6px 10px 0px 0px;
+			    font-size: 12px;
+			    color: rgb(60,60,60);
+			}
+					
+		    a.item-index:link, a.item-index:visited {color: rgb(60,60,60); text-decoration: none;}
+		    a.item-index:visited {color: rgb(60,60,60); text-decoration: none;}
+		    a.item-index:hover {color: rgb(249,88,37); text-decoration: none;}  
+		    a.item-index:active {color: rgb(249,88,37); text-decoration: none;}  	
+			
+			
+			/* Containers
+			----------------------------------------------------------------------------------------------------*/
+			.container_4 {
+				margin-left: auto;
+				margin-right: auto;
+				width: 960px;
+			}
+			
+			/* Grid >> Global
+			----------------------------------------------------------------------------------------------------*/
+			
+			
+			.grid_1,
+			.grid_2,
+			.grid_3,
+			.grid_4 {
+				display:inline;
+				float: left;
+				position: relative;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+			
+			.grid_detail {
+			 margin-left:  0px;
+			 margin-right: 0px;
+			 float: left;
+			 display:inline;
+			 margin-top: 35px;
+			}
+			
+			.push_1, .pull_1,
+			.push_2, .pull_2,
+			.push_3, .pull_3,
+			.push_4, .pull_4 {
+				position:relative;
+			}
+			
+			
+			/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+			----------------------------------------------------------------------------------------------------*/
+			
+			.alpha {
+				margin-left: 0;
+			}
+			
+			.omega {
+				margin-right: 0;
+			}
+			
+			/* Grid >> 4 Columns
+			----------------------------------------------------------------------------------------------------*/
+			
+			
+			.container_4 .grid_1 {
+				width:225px;
+			}
+			
+			.container_4 .grid_2 {
+				width:470px;
+			}
+			
+			.container_4 .grid_3 {
+				width:715px;
+			}
+			
+			.container_4 .grid_4 {
+				width:960px;
+			}
+			
+			.container_4 .grid_detail {
+				width:450px;
+			}
+			
+			
+			
+			
+			/* Prefix Extra Space >> 4 Columns
+			----------------------------------------------------------------------------------------------------*/
+			
+			
+			.container_4 .prefix_1 {
+				padding-left:245px;
+			}
+			
+			.container_4 .prefix_2 {
+				padding-left:490px;
+			}
+			
+			.container_4 .prefix_3 {
+				padding-left:735px;
+			}
+			
+			
+			
+			/* Suffix Extra Space >> 4 Columns
+			----------------------------------------------------------------------------------------------------*/
+			
+			
+			.container_4 .suffix_1 {
+				padding-right:245px;
+			}
+			
+			.container_4 .suffix_2 {
+				padding-right:490px;
+			}
+			
+			.container_4 .suffix_3 {
+				padding-right:735px;
+			}
+			
+			
+			
+			/* Push Space >> 4 Columns
+			----------------------------------------------------------------------------------------------------*/
+			
+			
+			.container_4 .push_1 {
+				left:245px;
+			}
+			
+			.container_4 .push_2 {
+				left:490px;
+			}
+			
+			.container_4 .push_3 {
+				left:735px;
+			}
+			
+			
+			
+			/* Pull Space >> 4 Columns
+			----------------------------------------------------------------------------------------------------*/
+			
+			
+			.container_4 .pull_1 {
+				left:-245px;
+			}
+			
+			.container_4 .pull_2 {
+				left:-490px;
+			}
+			
+			.container_4 .pull_3 {
+				left:-735px;
+			}
+			
+			
+			
+			
+			/* `Clear Floated Elements
+			----------------------------------------------------------------------------------------------------*/
+			
+			/* http://sonspring.com/journal/clearing-floats */
+			
+			.clear {
+			  clear: both;
+			  display: block;
+			  overflow: hidden;
+			  visibility: hidden;
+			  width: 0;
+			  height: 0;
+			}
+			
+			/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+			
+			.clearfix:before,
+			.clearfix:after {
+			  content: '\0020';
+			  display: block;
+			  overflow: hidden;
+			  visibility: hidden;
+			  width: 0;
+			  height: 0;
+			}
+			
+			.clearfix:after {
+			  clear: both;
+			}
+			
+			/*
+			  The following zoom:1 rule is specifically for IE6 + IE7.
+			  Move to separate stylesheet if invalid CSS is a problem.
+			*/
+			
+			.clearfix {
+			  zoom: 1;
+			}
+			
+					
+		/*	Typography presets
+			------------------	*/
+		
+		.gigantic {
+			font-size: 110px;
+			line-height: 120px;
+			letter-spacing: -2px;
+		}
+		
+		.huge, h1 {
+			font-size: 68px;
+			line-height: 72px;
+			letter-spacing: -1px;
+		}
+		
+		.large, h2 {
+			font-size: 42px;
+			line-height: 48px;
+		}
+		
+		.bigger, h3 {
+			font-size: 26px;
+			line-height: 36px;
+		}
+		
+		.big, h4 {
+			font-size: 20px;
+			line-height: 10px;
+		}
+		
+		body {
+			/*font: 16px/24px Georgia, serif;*/
+			/*font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif*/
+			font-family: 'PT Sans', sans-serif;
+		}
+		
+		.small, small {
+			font-size: 13px;
+			line-height: 18px;
+		}
+		
+		/* Selection colours (easy to forget) */
+
+		::selection 	 	{background: rgb(255,255,158);}
+		::-moz-selection 	{background: rgb(255,255,158);}
+		img::selection 		{background: transparent;}
+		img::-moz-selection	{background: transparent;}
+		body {-webkit-tap-highlight-color: rgb(255,255,158);}
+		
+		body {
+			background: rgb(251,251,251);
+			color: rgb(60,60,60);
+			text-align: center;
+			-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+		}	
+		
+		
+		/* Lightbox stuff */
+		
+		/* line 6, ../sass/lightbox.sass */
+		#lightboxOverlay {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  z-index: 9999;
+		  background-color: black;
+		  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+		  opacity: 0.85;
+		  display: none;
+		}
+		
+		/* line 15, ../sass/lightbox.sass */
+		#lightbox {
+		  position: absolute;
+		  left: 0;
+		  width: 100%;
+		  z-index: 10000;
+		  text-align: center;
+		  line-height: 0;
+		  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+		  font-weight: normal;
+		}
+		/* line 24, ../sass/lightbox.sass */
+		#lightbox img {
+		  width: auto;
+		  height: auto;
+		}
+		/* line 27, ../sass/lightbox.sass */
+		#lightbox a img {
+		  border: none;
+		}
+		
+		/* line 30, ../sass/lightbox.sass */
+		.lb-outerContainer {
+		  position: relative;
+		  background-color: white;
+		  *zoom: 1;
+		  width: 250px;
+		  height: 250px;
+		  margin: 0 auto;
+		  -webkit-border-radius: 4px;
+		  -moz-border-radius: 4px;
+		  -ms-border-radius: 4px;
+		  -o-border-radius: 4px;
+		  border-radius: 4px;
+		}
+		/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+		.lb-outerContainer:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		
+		/* line 39, ../sass/lightbox.sass */
+		.lb-container {
+		  padding: 10px;
+		}
+		
+		/* line 42, ../sass/lightbox.sass */
+		.lb-loader {
+		  position: absolute;
+		  top: 40%;
+		  left: 0%;
+		  height: 25%;
+		  width: 100%;
+		  text-align: center;
+		  line-height: 0;
+		}
+		
+		/* line 51, ../sass/lightbox.sass */
+		.lb-nav {
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  height: 100%;
+		  width: 100%;
+		  z-index: 10;
+		}
+		
+		/* line 59, ../sass/lightbox.sass */
+		.lb-container > .nav {
+		  left: 0;
+		}
+		
+		/* line 62, ../sass/lightbox.sass */
+		.lb-nav a {
+		  outline: none;
+		}
+		
+		/* line 65, ../sass/lightbox.sass */
+		.lb-prev, .lb-next {
+		  width: 49%;
+		  height: 100%;
+		  background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+		  /* Trick IE into showing hover */
+		  display: block;
+		}
+		
+		/* line 72, ../sass/lightbox.sass */
+		.lb-prev {
+		  left: 0;
+		  float: left;
+		}
+		
+		/* line 76, ../sass/lightbox.sass */
+		.lb-next {
+		  right: 0;
+		  float: right;
+		}
+		
+		/* line 81, ../sass/lightbox.sass */
+		.lb-prev:hover {
+		  background: url("prev.png.html") left 48% no-repeat;
+		}
+		
+		/* line 85, ../sass/lightbox.sass */
+		.lb-next:hover {
+		  background: url("next.png.html") right 48% no-repeat;
+		}
+		
+		/* line 88, ../sass/lightbox.sass */
+		.lb-dataContainer {
+		  margin: 0 auto;
+		  padding-top: 5px;
+		  *zoom: 1;
+		  width: 100%;
+		  -moz-border-radius-bottomleft: 4px;
+		  -webkit-border-bottom-left-radius: 4px;
+		  -ms-border-bottom-left-radius: 4px;
+		  -o-border-bottom-left-radius: 4px;
+		  border-bottom-left-radius: 4px;
+		  -moz-border-radius-bottomright: 4px;
+		  -webkit-border-bottom-right-radius: 4px;
+		  -ms-border-bottom-right-radius: 4px;
+		  -o-border-bottom-right-radius: 4px;
+		  border-bottom-right-radius: 4px;
+		}
+		/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+		.lb-dataContainer:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+		
+		/* line 95, ../sass/lightbox.sass */
+		.lb-data {
+		  padding: 0 10px;
+		  color: #bbbbbb;
+		}
+		/* line 98, ../sass/lightbox.sass */
+		.lb-data .lb-details {
+		  width: 85%;
+		  float: left;
+		  text-align: left;
+		  line-height: 1.1em;
+		}
+		/* line 103, ../sass/lightbox.sass */
+		.lb-data .lb-caption {
+		  font-size: 13px;
+		  font-weight: bold;
+		  line-height: 1em;
+		}
+		/* line 107, ../sass/lightbox.sass */
+		.lb-data .lb-number {
+		  display: block;
+		  clear: left;
+		  padding-bottom: 1em;
+		  font-size: 11px;
+		}
+		/* line 112, ../sass/lightbox.sass */
+		.lb-data .lb-close {
+		  width: 35px;
+		  float: right;
+		  padding-bottom: 0.7em;
+		  outline: none;
+		}
+		/* line 117, ../sass/lightbox.sass */
+		.lb-data .lb-close:hover {
+		  cursor: pointer;
+		}

@@ -1,1 +1,41 @@
 @import "bootstrap.less";
+@import "utilities.less";
+
+body {
+	margin: 64px;  
+}
+
+/* ITEMS */
+.items{ 
+	font-size: 0;
+	text-align: center;
+	.item{
+		text-align: left;
+		font-size: 14px;
+		width: 225px;
+		display: inline-block;
+		vertical-align: top;
+		margin: 12px;
+		.title {
+			font-weight: bold;
+		}
+	}
+}
+/* ITEMS */
+
+footer {
+	line-height: 0;
+	position: relative;
+	z-index:2;
+  .content {
+		background-color: white;
+ 		padding: 0 12px;
+ 	}
+}
+
+footer:before {
+	border-top: 1px solid @gray-dark;
+	content: '';
+	display: block;
+	z-index: -1;
+}

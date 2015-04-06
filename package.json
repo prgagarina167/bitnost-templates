@@ -5,7 +5,8 @@
     "bower": "*",
     "browser-sync": "*",
     "gulp-compile-handlebars": "*",
-    "gulp-rename": "*"
+    "gulp-rename": "*",
+    "faker": "*"
   },
   "scripts": {
     "postinstall": "./node_modules/.bin/bower install"

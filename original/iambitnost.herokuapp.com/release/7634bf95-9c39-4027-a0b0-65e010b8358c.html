@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Bitnost records – spend your bitcoins on music!</title>
+		<link rel="stylesheet" media="all" href="../stylesheets/bootstrap.css">
+		<link rel="stylesheet" media="all" href="../stylesheets/shared.css">
+		<link rel="icon" type="image/png"href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis:400,800' rel='stylesheet' type='text/css'>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+</head>
+<body lang="en">
+	    <div class="container_4">
+	        <div id="logo">
+	            <h2><a href="../index.html"><img src="../logo_bit.png" width="65px"><br />Bitnost records</a></h2>
+	        </div>
+	        <div id="menu">
+	            <ul>
+                    <a href="../index.html"><li id="shop">About</li></a>
+                    <a href="../index.html"><li id="contact">Contact</li></a>
+                    <a href="../cart.html"><li id="home">Сart</li></a>
+                </ul>
+	        </div>
+	        <div id="submenu">
+	            <ul>           
+                    <a href=""><li id="menu_1">Just arrived</li></a>                    
+                    <a href=""><li id="menu_2">Recommended</li></a>
+                    <a href=""><li id="menu_3">Pre-orders</li></a> 
+                    <a href=""><li id="menu_3">Bestsellers</li></a> 
+                    <a href="../cart.html"><li id="menu_7">Remove old carts</li></a>  
+                </ul>
+	        </div>
+	        
+			<div id="content">
+				
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+var products = {
+  "3072d318-5a89-4279-a6e0-75ad0684549a": {
+    "gdid": "12903",
+    "uuid": "3072d318-5a89-4279-a6e0-75ad0684549a",
+    "uuid_release": "7634bf95-9c39-4027-a0b0-65e010b8358c",
+    "is_primary_format": "1",
+    "catalog_nr": "SV065LP",
+    "uuid_format": "2249fb26-0880-44a5-acce-720b005a715a",
+    "uuid_label": "02bb114b-6180-46c7-a59b-bae81cce23bf",
+    "title": "The Black Saint and The Sinner Lady",
+    "display_artist": "Charles Mingus",
+    "barcode": "857176003652",
+    "release_date": "2015-04-03",
+    "release_date_usa": null,
+    "designer": null,
+    "tech_info": "Heavyweight Tip-On Gatefold",
+    "status": "backcatalog",
+    "weight": "300",
+    "length": "31",
+    "width": "31",
+    "height": "0",
+    "discogs_id": "6675112",
+    "vat_type": "1",
+    "uuid_pricecode": "6845124b-7005-4b68-ad0d-38ce88d56e10",
+    "price_to_customer": "24.99",
+    "uuid_playlist": "04003c65-3db8-470a-ab38-76450725f068",
+    "explicit_lyrics": "0",
+    "main_artist": [
+      "7cc99b98-45ba-4a55-a058-d052029c3a0f"
+    ],
+    "format_name": "LP"
+  }
+}
+$(document).ready(function(){
+		$.each(products, function(key, value) {
+			$('#format_selector').append('<option value=' + value.uuid + '>' + value.format_name +'</option>');
+
+		})
+
+		var uuid = $('#format_selector option:selected').val();
+		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+		$('#price').val(products[uuid].price_to_customer);
+		$('#sku').val(uuid);
+		$('#format').val(products[uuid].format_name);
+
+		$('#format_selector').change(function(event){
+    		uuid = $('#format_selector option:selected').val();
+    		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+    		$('#price').val(products[uuid].price_to_customer);
+    		$('#sku').val(uuid);
+    		$('#format').val(products[uuid].format_name);
+    	});
+});      
+</script>
+
+<div class="grid_detail">
+        <a href="http://api.morrmusic.com/image/7634bf95-9c39-4027-a0b0-65e010b8358c/450.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy" border="1px"><img src="http://api.morrmusic.com/image/7634bf95-9c39-4027-a0b0-65e010b8358c/450.jpg" height="450px" border="1px" style="border-color: black"></a><br /><br />
+        
+        <a href="http://api.morrmusic.com/image/7634bf95-9c39-4027-a0b0-65e010b8358c/100.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy"><img src="http://api.morrmusic.com/image/7634bf95-9c39-4027-a0b0-65e010b8358c/100.jpg" border="1px" width="100px" style="border-color: black"></a>&nbsp;&nbsp;	
+</div>
+
+<div id="detail-description" class="grid_2">
+	    <p class="big">Charles Mingus<br /><br /><br /><strong>The Black Saint and The Sinner Lady</strong><br /><br /></p>
+	    <p class="description">Bassist / composer CHARLES MINGUS is one of the most radical figures in American music. Throughout the '50s, he worked as a sideman with legendary players Charlie Parker, Dizzy Gillespie and more. In the '60s, he gained recognition as a bandleader, often followed by controversy for making strong-minded statements in the press about race, politics and stodgy music critics. While MINGUS received many honors posthumously as well as during his career, perhaps his greatest achievement was transcending the restrictive label of jazz.<br /><br />The Black Saint and The Sinner Lady is without question MINGUS' magnum opus. Originally released on Impulse! in 1963, the album broke new ground in both genre-defying composition and innovative recording techniques. A six-part suite with dramatic shifts in mood and tempo, The Black Saint and The Sinner Lady features the three-way brass dialogue of trumpets, trombone and tuba, swooping reeds and awe-inspiring rhythm section. Balancing delicate Spanish modes and Ellingtonian themes, the ensemble breaks into a divine cacophony of group improvisation on par with free jazz giants Ornette Coleman or Cecil Taylor.<br /><br />In his best-known essay, "Psychotic Reactions and Carburetor Dung," Lester Bangs praises, "the experience of the first few listenings to a record so total, so mind-twisting, that you authentically can say you'll never be quite the same again. Black Saint and The Sinner Lady did that, and a very few others. They're events you remember all your life, like your first real orgasm."<br /><br />This long out-of-print vinyl release has been carefully remastered from the original master tapes.</p> 
+	    
+	    <h3></h3>
+	    <form action="/add" method="post" name="form">
+		    <select name="format_selector" class="form-control col-xs-1" id="format_selector"></select>
+
+			<br /><br />
+			<input id="format" type="hidden" name="format" value="" />
+			<input id="sku" type="hidden" name="sku" value="" />
+			<input id="price" type="hidden" name="price" value="" />
+			<input type="hidden" name="details" value="Charles Mingus - The Black Saint and The Sinner Lady" />
+			<button type="submit" class="btn btn-default">Add to cart</button>
+		</form>				    
+</div>
+<div class="clear"></div><br /><br /><br />
+
+<div class="items-normal">
+	
+	    <h4 align="left">More releases</h4>
+
+	    
+			<a class="item-index" href="81061ece-7534-4202-a5ff-ca342480a430.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/81061ece-7534-4202-a5ff-ca342480a430/225.jpg" width="225px"></div>
+		            <div class="item-name">Ya Tosiba Ya Tosiba Remixes</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="32412030-f027-40ba-abd9-f5af2087c4f1.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/225.jpg" width="225px"></div>
+		            <div class="item-name">Danielle de Picciotto Tacoma</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="e943dd04-0740-4b27-a702-d88c8db9bb61.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/e943dd04-0740-4b27-a702-d88c8db9bb61/225.jpg" width="225px"></div>
+		            <div class="item-name">Toro Y Moi What For?</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="90bc6a37-8576-4512-a28a-3a1bb50f70f4.html">
+		        <div class="item last">
+		            <div><img src="http://api.morrmusic.com/image/90bc6a37-8576-4512-a28a-3a1bb50f70f4/225.jpg" width="225px"></div>
+		            <div class="item-name">Sumac The Deal</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+	<div class="clear"></div>
+</div>
+			</div>
+
+			<span id="footer" class="small">© 2015 Anost</span>
+		</div>

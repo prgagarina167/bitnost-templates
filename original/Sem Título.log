@@ -1,0 +1,24 @@
+
+06/04/15, 09:56:03 - ERRO: A transferência de "http://iambitnost.herokuapp.com/stylesheets/prev.png",
+	com referência de "/Users/fimdomeio/Documents/fimdomeio/original/iambitnost.herokuapp.com/stylesheets/shared.css",
+	falhou com o código de erro 404 (not found)
+06/04/15, 09:56:03 - ERRO: A transferência de "http://iambitnost.herokuapp.com/stylesheets/next.png",
+	com referência de "/Users/fimdomeio/Documents/fimdomeio/original/iambitnost.herokuapp.com/stylesheets/shared.css",
+	falhou com o código de erro 404 (not found)
+06/04/15, 09:56:03 - ERRO: A transferência de "http://iambitnost.herokuapp.com/fonts/glyphicons-halflings-regular.eot?",
+	com referência de "/Users/fimdomeio/Documents/fimdomeio/original/iambitnost.herokuapp.com/stylesheets/bootstrap.css",
+	falhou com o código de erro 404 (not found)
+06/04/15, 09:56:03 - ERRO: A transferência de "http://iambitnost.herokuapp.com/fonts/glyphicons-halflings-regular.eot",
+	com referência de "/Users/fimdomeio/Documents/fimdomeio/original/iambitnost.herokuapp.com/stylesheets/bootstrap.css",
+	falhou com o código de erro 404 (not found)
+06/04/15, 09:56:03 - ERRO: A transferência de "http://iambitnost.herokuapp.com/fonts/glyphicons-halflings-regular.woff",
+	com referência de "/Users/fimdomeio/Documents/fimdomeio/original/iambitnost.herokuapp.com/stylesheets/bootstrap.css",
+	falhou com o código de erro 404 (not found)
+06/04/15, 09:56:03 - ERRO: A transferência de "http://iambitnost.herokuapp.com/fonts/glyphicons-halflings-regular.ttf",
+	com referência de "/Users/fimdomeio/Documents/fimdomeio/original/iambitnost.herokuapp.com/stylesheets/bootstrap.css",
+	falhou com o código de erro 404 (not found)
+06/04/15, 09:56:03 - ERRO: A transferência de "http://iambitnost.herokuapp.com/fonts/glyphicons-halflings-regular.svg",
+	com referência de "/Users/fimdomeio/Documents/fimdomeio/original/iambitnost.herokuapp.com/stylesheets/bootstrap.css",
+	falhou com o código de erro 404 (not found)
+
+---------------------

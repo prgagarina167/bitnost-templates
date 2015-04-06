@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Bitnost records – spend your bitcoins on music!</title>
+		<link rel="stylesheet" media="all" href="../stylesheets/bootstrap.css">
+		<link rel="stylesheet" media="all" href="../stylesheets/shared.css">
+		<link rel="icon" type="image/png"href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis:400,800' rel='stylesheet' type='text/css'>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+</head>
+<body lang="en">
+	    <div class="container_4">
+	        <div id="logo">
+	            <h2><a href="../index.html"><img src="../logo_bit.png" width="65px"><br />Bitnost records</a></h2>
+	        </div>
+	        <div id="menu">
+	            <ul>
+                    <a href="../index.html"><li id="shop">About</li></a>
+                    <a href="../index.html"><li id="contact">Contact</li></a>
+                    <a href="../cart.html"><li id="home">Сart</li></a>
+                </ul>
+	        </div>
+	        <div id="submenu">
+	            <ul>           
+                    <a href=""><li id="menu_1">Just arrived</li></a>                    
+                    <a href=""><li id="menu_2">Recommended</li></a>
+                    <a href=""><li id="menu_3">Pre-orders</li></a> 
+                    <a href=""><li id="menu_3">Bestsellers</li></a> 
+                    <a href="../cart.html"><li id="menu_7">Remove old carts</li></a>  
+                </ul>
+	        </div>
+	        
+			<div id="content">
+				
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+var products = {
+  "7c841138-eb82-47a8-ad0c-10256c30ae71": {
+    "gdid": "13032",
+    "uuid": "7c841138-eb82-47a8-ad0c-10256c30ae71",
+    "uuid_release": "da22a02a-09a5-404b-ab9d-753d3d6d82d0",
+    "is_primary_format": "1",
+    "catalog_nr": "MEX 198",
+    "uuid_format": "2249fb26-0880-44a5-acce-720b005a715a",
+    "uuid_label": "f3b09dcb-c008-449a-a226-49a293fe1b91",
+    "title": "A Year With 13 Moons",
+    "display_artist": "Jefre Cantu-Ledesma",
+    "barcode": null,
+    "release_date": "2015-04-03",
+    "release_date_usa": null,
+    "designer": null,
+    "tech_info": null,
+    "status": "backcatalog",
+    "weight": "300",
+    "length": "31",
+    "width": "31",
+    "height": "0",
+    "discogs_id": "6637788",
+    "vat_type": "1",
+    "uuid_pricecode": "570b0050-7773-4e10-a462-1dcd14ca7f75",
+    "price_to_customer": "22.99",
+    "uuid_playlist": "a0a6bc2b-dc73-4b76-a503-363e6363b358",
+    "explicit_lyrics": "0",
+    "main_artist": [
+      "21725f08-691e-4ea2-ae3a-ac7c9b9c0f39"
+    ],
+    "format_name": "LP"
+  }
+}
+$(document).ready(function(){
+		$.each(products, function(key, value) {
+			$('#format_selector').append('<option value=' + value.uuid + '>' + value.format_name +'</option>');
+
+		})
+
+		var uuid = $('#format_selector option:selected').val();
+		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+		$('#price').val(products[uuid].price_to_customer);
+		$('#sku').val(uuid);
+		$('#format').val(products[uuid].format_name);
+
+		$('#format_selector').change(function(event){
+    		uuid = $('#format_selector option:selected').val();
+    		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+    		$('#price').val(products[uuid].price_to_customer);
+    		$('#sku').val(uuid);
+    		$('#format').val(products[uuid].format_name);
+    	});
+});      
+</script>
+
+<div class="grid_detail">
+        <a href="http://api.morrmusic.com/image/da22a02a-09a5-404b-ab9d-753d3d6d82d0/450.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy" border="1px"><img src="http://api.morrmusic.com/image/da22a02a-09a5-404b-ab9d-753d3d6d82d0/450.jpg" height="450px" border="1px" style="border-color: black"></a><br /><br />
+        
+        <a href="http://api.morrmusic.com/image/da22a02a-09a5-404b-ab9d-753d3d6d82d0/100.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy"><img src="http://api.morrmusic.com/image/da22a02a-09a5-404b-ab9d-753d3d6d82d0/100.jpg" border="1px" width="100px" style="border-color: black"></a>&nbsp;&nbsp;	
+</div>
+
+<div id="detail-description" class="grid_2">
+	    <p class="big">Jefre Cantu-Ledesma<br /><br /><br /><strong>A Year With 13 Moons</strong><br /><br /></p>
+	    <p class="description">On A Year With 13 Moons, Jefre Cantu-Ledesma is hitting a new high. A companion to his last album Love is A Stream (Type, 2010), 13 Moons is a dense, swirling mass. Hypnotic guitar and drum performances coalesce with Modular synth squalls and otherworldly textures –– combining overdriven guitars, avant-garde composition with the informal approach of underground tape weirdos (like Robert Turman, K. Leimer) into a lovely brocade of harmony and dissonance.<br /> <br />The album was recorded during a residency at the Headlands Center for the Arts, which allowed Jefre the time and freedom to "let the music create itself in a way, to lead me rather than trying to force it down a path." Cantu was interested in ways of "conveying memory in music without being sentimental - translating the fog of images, people and places that [he'd] experienced in the last two years into a body of work that could still be ambiguous and leave space for the listener to enter."<br /> <br />Ledesma has released notable collaborations with Liz Harris (aka Grouper) as Raum, with Alexis Georgopoulos of Arp and The Alps, as well as filmmaker Paul Clipson. He also founded the influential label, Root Strata, who have released music by Oneohtrix Point Never, Keith Fullerton Whitman, and Grouper.</p> 
+	    
+	    <h3></h3>
+	    <form action="/add" method="post" name="form">
+		    <select name="format_selector" class="form-control col-xs-1" id="format_selector"></select>
+
+			<br /><br />
+			<input id="format" type="hidden" name="format" value="" />
+			<input id="sku" type="hidden" name="sku" value="" />
+			<input id="price" type="hidden" name="price" value="" />
+			<input type="hidden" name="details" value="Jefre Cantu-Ledesma - A Year With 13 Moons" />
+			<button type="submit" class="btn btn-default">Add to cart</button>
+		</form>				    
+</div>
+<div class="clear"></div><br /><br /><br />
+
+<div class="items-normal">
+	
+	    <h4 align="left">More releases</h4>
+
+	    
+			<a class="item-index" href="81061ece-7534-4202-a5ff-ca342480a430.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/81061ece-7534-4202-a5ff-ca342480a430/225.jpg" width="225px"></div>
+		            <div class="item-name">Ya Tosiba Ya Tosiba Remixes</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="32412030-f027-40ba-abd9-f5af2087c4f1.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/225.jpg" width="225px"></div>
+		            <div class="item-name">Danielle de Picciotto Tacoma</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="e943dd04-0740-4b27-a702-d88c8db9bb61.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/e943dd04-0740-4b27-a702-d88c8db9bb61/225.jpg" width="225px"></div>
+		            <div class="item-name">Toro Y Moi What For?</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="90bc6a37-8576-4512-a28a-3a1bb50f70f4.html">
+		        <div class="item last">
+		            <div><img src="http://api.morrmusic.com/image/90bc6a37-8576-4512-a28a-3a1bb50f70f4/225.jpg" width="225px"></div>
+		            <div class="item-name">Sumac The Deal</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+	<div class="clear"></div>
+</div>
+			</div>
+
+			<span id="footer" class="small">© 2015 Anost</span>
+		</div>

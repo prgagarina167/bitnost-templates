@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Bitnost records – spend your bitcoins on music!</title>
+		<link rel="stylesheet" media="all" href="../stylesheets/bootstrap.css">
+		<link rel="stylesheet" media="all" href="../stylesheets/shared.css">
+		<link rel="icon" type="image/png"href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis:400,800' rel='stylesheet' type='text/css'>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+</head>
+<body lang="en">
+	    <div class="container_4">
+	        <div id="logo">
+	            <h2><a href="../index.html"><img src="../logo_bit.png" width="65px"><br />Bitnost records</a></h2>
+	        </div>
+	        <div id="menu">
+	            <ul>
+                    <a href="../index.html"><li id="shop">About</li></a>
+                    <a href="../index.html"><li id="contact">Contact</li></a>
+                    <a href="../cart.html"><li id="home">Сart</li></a>
+                </ul>
+	        </div>
+	        <div id="submenu">
+	            <ul>           
+                    <a href=""><li id="menu_1">Just arrived</li></a>                    
+                    <a href=""><li id="menu_2">Recommended</li></a>
+                    <a href=""><li id="menu_3">Pre-orders</li></a> 
+                    <a href=""><li id="menu_3">Bestsellers</li></a> 
+                    <a href="../cart.html"><li id="menu_7">Remove old carts</li></a>  
+                </ul>
+	        </div>
+	        
+			<div id="content">
+				
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+var products = {
+  "90b82d3f-3ce8-451a-a628-2c2c0b4b7350": {
+    "gdid": "12819",
+    "uuid": "90b82d3f-3ce8-451a-a628-2c2c0b4b7350",
+    "uuid_release": "32412030-f027-40ba-abd9-f5af2087c4f1",
+    "is_primary_format": "1",
+    "catalog_nr": "moa19cd",
+    "uuid_format": "84619846-3d04-4219-a8fa-d95d32de0916",
+    "uuid_label": "37be2d7d-860b-4e2c-a08b-228e480a26b2",
+    "title": "Tacoma",
+    "display_artist": "Danielle de Picciotto",
+    "barcode": "880918221564",
+    "release_date": "2015-04-17",
+    "release_date_usa": null,
+    "designer": null,
+    "tech_info": "PRE-ORDER !!! Digisleeve incl. Booklet",
+    "status": "pre-order anost",
+    "weight": "125",
+    "length": null,
+    "width": null,
+    "height": null,
+    "discogs_id": null,
+    "vat_type": "1",
+    "uuid_pricecode": "c21f4096-89bf-475c-a1cd-d332c9ac112b",
+    "price_to_customer": "13.99",
+    "uuid_playlist": "e0b2cd2c-279b-4094-a355-e024ffa0ab49",
+    "explicit_lyrics": "0",
+    "main_artist": [
+      "41b12f03-f243-4b9c-a046-2f00007b3336"
+    ],
+    "format_name": "CD"
+  },
+  "14614300-b0f5-44aa-a593-2e030d50c007": {
+    "gdid": "12820",
+    "uuid": "14614300-b0f5-44aa-a593-2e030d50c007",
+    "uuid_release": "32412030-f027-40ba-abd9-f5af2087c4f1",
+    "is_primary_format": "0",
+    "catalog_nr": "moa19mc ",
+    "uuid_format": "e78cbf49-3283-4218-a6f9-16102a09c2e4",
+    "uuid_label": "37be2d7d-860b-4e2c-a08b-228e480a26b2",
+    "title": "Tacoma",
+    "display_artist": "Danielle de Picciotto",
+    "barcode": "880918221571",
+    "release_date": "2015-04-17",
+    "release_date_usa": null,
+    "designer": null,
+    "tech_info": "PRE-ORDER !!! Handstamped and signed copies",
+    "status": "pre-order anost",
+    "weight": "80",
+    "length": null,
+    "width": null,
+    "height": null,
+    "discogs_id": null,
+    "vat_type": "1",
+    "uuid_pricecode": "4c196189-ae1a-4568-a944-3d0709954072",
+    "price_to_customer": "7.99",
+    "uuid_playlist": "e0b2cd2c-279b-4094-a355-e024ffa0ab49",
+    "explicit_lyrics": "0",
+    "main_artist": [
+      "41b12f03-f243-4b9c-a046-2f00007b3336"
+    ],
+    "format_name": "MC"
+  }
+}
+$(document).ready(function(){
+		$.each(products, function(key, value) {
+			$('#format_selector').append('<option value=' + value.uuid + '>' + value.format_name +'</option>');
+
+		})
+
+		var uuid = $('#format_selector option:selected').val();
+		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+		$('#price').val(products[uuid].price_to_customer);
+		$('#sku').val(uuid);
+		$('#format').val(products[uuid].format_name);
+
+		$('#format_selector').change(function(event){
+    		uuid = $('#format_selector option:selected').val();
+    		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+    		$('#price').val(products[uuid].price_to_customer);
+    		$('#sku').val(uuid);
+    		$('#format').val(products[uuid].format_name);
+    	});
+});      
+</script>
+
+<div class="grid_detail">
+        <a href="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/450.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy" border="1px"><img src="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/450.jpg" height="450px" border="1px" style="border-color: black"></a><br /><br />
+        
+        <a href="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/100.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy"><img src="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/100.jpg" border="1px" width="100px" style="border-color: black"></a>&nbsp;&nbsp;	
+</div>
+
+<div id="detail-description" class="grid_2">
+	    <p class="big">Danielle de Picciotto<br /><br /><br /><strong>Tacoma</strong><br /><br /></p>
+	    <p class="description">PRE-ORDER ships around April 17th 2015!<br /><br />DANIELLE DE PICCIOTTO is a wanderer. She explores the regions between the inner and outer realms of our collective psyche and gathers impressions, which cumulate into the many-tentacled beast, which is her artistic output. Expressing the wonder of worlds invisible to most, she is initiated and an initiator, someone who has made the first steps and opens the gates for others to follow.<br /><br />Born in Tacoma, a place she did not get to mark in her memory, as her father moved the family on, shortly thereafter, due to his position in the US-army, she spent her childhood all over North America until she settled as a young woman in West Berlin, a city which no longer exists. There she was caught up in the relentless creative turmoil this unique enclave had to offer and was able to interact with and influence its community for more than two decades. Originally a fine artist Danielle has over the years embraced many fields of artistic expression and aside from large-scale paintings and her signature intricately detailed drawings embraced literature, film and foremost music to will her extraordinary vision into existence.<br /><br />With TACOMA, her first solo-album, she creates a sonic scenery unlike any other. Employing unusual instruments like the hurdy gurdy and the autoharp, while accompanying her spoken-word poetry and delicate vocal styling’s with multi-layered violin harmonies, she evokes an imagery of lonesome desert landscapes, enchanted forests and otherworldly trance-states while straddling maritime thunderstorms by combining recordings of natures manifold phenomena with radio interferences, reverberating tribal percussions, electronic treatments and the soothing and genuinely organic vibrations of acoustically generated drones and internal mantras.<br /><br />Her lyrics focus on the mystical implications of the nomadic life, clairvoyant renderings of female intuition and tales of dreamlike revelations, while the instrumental pieces of this astonishing album transport the listener onto paths never tread or like Danielle herself, who only recently returned for the first time to the place of her birth onto a journey to the beginning of time.</p> 
+	    
+	    	<p>Genre: <i>Indie / Pop, Alternative</i></p>
+	    
+	    <h3></h3>
+	    <form action="/add" method="post" name="form">
+		    <select name="format_selector" class="form-control col-xs-1" id="format_selector"></select>
+
+			<br /><br />
+			<input id="format" type="hidden" name="format" value="" />
+			<input id="sku" type="hidden" name="sku" value="" />
+			<input id="price" type="hidden" name="price" value="" />
+			<input type="hidden" name="details" value="Danielle de Picciotto - Tacoma" />
+			<button type="submit" class="btn btn-default">Add to cart</button>
+		</form>				    
+</div>
+<div class="clear"></div><br /><br /><br />
+
+<div class="items-normal">
+	
+	    <h4 align="left">More releases</h4>
+
+	    
+			<a class="item-index" href="81061ece-7534-4202-a5ff-ca342480a430.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/81061ece-7534-4202-a5ff-ca342480a430/225.jpg" width="225px"></div>
+		            <div class="item-name">Ya Tosiba Ya Tosiba Remixes</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="32412030-f027-40ba-abd9-f5af2087c4f1.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/225.jpg" width="225px"></div>
+		            <div class="item-name">Danielle de Picciotto Tacoma</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="e943dd04-0740-4b27-a702-d88c8db9bb61.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/e943dd04-0740-4b27-a702-d88c8db9bb61/225.jpg" width="225px"></div>
+		            <div class="item-name">Toro Y Moi What For?</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="90bc6a37-8576-4512-a28a-3a1bb50f70f4.html">
+		        <div class="item last">
+		            <div><img src="http://api.morrmusic.com/image/90bc6a37-8576-4512-a28a-3a1bb50f70f4/225.jpg" width="225px"></div>
+		            <div class="item-name">Sumac The Deal</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+	<div class="clear"></div>
+</div>
+			</div>
+
+			<span id="footer" class="small">© 2015 Anost</span>
+		</div>

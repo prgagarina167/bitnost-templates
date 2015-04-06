@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Bitnost records – spend your bitcoins on music!</title>
+		<link rel="stylesheet" media="all" href="../stylesheets/bootstrap.css">
+		<link rel="stylesheet" media="all" href="../stylesheets/shared.css">
+		<link rel="icon" type="image/png"href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis:400,800' rel='stylesheet' type='text/css'>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+</head>
+<body lang="en">
+	    <div class="container_4">
+	        <div id="logo">
+	            <h2><a href="../index.html"><img src="../logo_bit.png" width="65px"><br />Bitnost records</a></h2>
+	        </div>
+	        <div id="menu">
+	            <ul>
+                    <a href="../index.html"><li id="shop">About</li></a>
+                    <a href="../index.html"><li id="contact">Contact</li></a>
+                    <a href="../cart.html"><li id="home">Сart</li></a>
+                </ul>
+	        </div>
+	        <div id="submenu">
+	            <ul>           
+                    <a href=""><li id="menu_1">Just arrived</li></a>                    
+                    <a href=""><li id="menu_2">Recommended</li></a>
+                    <a href=""><li id="menu_3">Pre-orders</li></a> 
+                    <a href=""><li id="menu_3">Bestsellers</li></a> 
+                    <a href="../cart.html"><li id="menu_7">Remove old carts</li></a>  
+                </ul>
+	        </div>
+	        
+			<div id="content">
+				
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+var products = {
+  "a48b1573-a001-4003-a7a0-6a895f096171": {
+    "gdid": "13079",
+    "uuid": "a48b1573-a001-4003-a7a0-6a895f096171",
+    "uuid_release": "04c8418e-2450-4c76-a5e0-1e0091ddba32",
+    "is_primary_format": "1",
+    "catalog_nr": "WAP381",
+    "uuid_format": "76ac02f8-707e-4378-a330-25480a0ee5b2",
+    "uuid_label": "c6d0a32a-4732-40a8-a0f7-454146990c10",
+    "title": "MARCHROMT30a Edit 2b 96 EP",
+    "display_artist": "Aphex Twin",
+    "barcode": "801061938116",
+    "release_date": "2015-04-03",
+    "release_date_usa": null,
+    "designer": null,
+    "tech_info": null,
+    "status": "webshop only",
+    "weight": "300",
+    "length": null,
+    "width": null,
+    "height": null,
+    "discogs_id": null,
+    "vat_type": "1",
+    "uuid_pricecode": "1f504043-463a-435b-ab10-5a86d9108c5a",
+    "price_to_customer": "9.99",
+    "uuid_playlist": "1256b85d-bf70-44d0-abe0-00a5b4e7c18c",
+    "explicit_lyrics": "0",
+    "main_artist": [
+      "749b711b-482b-440c-a792-06399fdc877f"
+    ],
+    "format_name": "12”"
+  }
+}
+$(document).ready(function(){
+		$.each(products, function(key, value) {
+			$('#format_selector').append('<option value=' + value.uuid + '>' + value.format_name +'</option>');
+
+		})
+
+		var uuid = $('#format_selector option:selected').val();
+		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+		$('#price').val(products[uuid].price_to_customer);
+		$('#sku').val(uuid);
+		$('#format').val(products[uuid].format_name);
+
+		$('#format_selector').change(function(event){
+    		uuid = $('#format_selector option:selected').val();
+    		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+    		$('#price').val(products[uuid].price_to_customer);
+    		$('#sku').val(uuid);
+    		$('#format').val(products[uuid].format_name);
+    	});
+});      
+</script>
+
+<div class="grid_detail">
+        <a href="http://api.morrmusic.com/image/04c8418e-2450-4c76-a5e0-1e0091ddba32/450.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy" border="1px"><img src="http://api.morrmusic.com/image/04c8418e-2450-4c76-a5e0-1e0091ddba32/450.jpg" height="450px" border="1px" style="border-color: black"></a><br /><br />
+        
+        <a href="http://api.morrmusic.com/image/04c8418e-2450-4c76-a5e0-1e0091ddba32/100.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy"><img src="http://api.morrmusic.com/image/04c8418e-2450-4c76-a5e0-1e0091ddba32/100.jpg" border="1px" width="100px" style="border-color: black"></a>&nbsp;&nbsp;	
+</div>
+
+<div id="detail-description" class="grid_2">
+	    <p class="big">Aphex Twin<br /><br /><br /><strong>MARCHROMT30a Edit 2b 96 EP</strong><br /><br /></p>
+	    <p class="description">MARCHROMT30a Edit 2b 96 first appeared as the Japanese bonus track for recent album ‘Syro’ becoming an instant favourite of those that heard it. The song now comes to vinyl for a global audience, backed with a new version of Syro track ‘XMAS_EVET10 [120] (thanaton3 mix)’ and an alternate take of MARCHROMT. It's released on white label 12" with hand stamp.</p> 
+	    
+	    <h3></h3>
+	    <form action="/add" method="post" name="form">
+		    <select name="format_selector" class="form-control col-xs-1" id="format_selector"></select>
+
+			<br /><br />
+			<input id="format" type="hidden" name="format" value="" />
+			<input id="sku" type="hidden" name="sku" value="" />
+			<input id="price" type="hidden" name="price" value="" />
+			<input type="hidden" name="details" value="Aphex Twin - MARCHROMT30a Edit 2b 96 EP" />
+			<button type="submit" class="btn btn-default">Add to cart</button>
+		</form>				    
+</div>
+<div class="clear"></div><br /><br /><br />
+
+<div class="items-normal">
+	
+	    <h4 align="left">More releases</h4>
+
+	    
+			<a class="item-index" href="81061ece-7534-4202-a5ff-ca342480a430.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/81061ece-7534-4202-a5ff-ca342480a430/225.jpg" width="225px"></div>
+		            <div class="item-name">Ya Tosiba Ya Tosiba Remixes</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="32412030-f027-40ba-abd9-f5af2087c4f1.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/225.jpg" width="225px"></div>
+		            <div class="item-name">Danielle de Picciotto Tacoma</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="e943dd04-0740-4b27-a702-d88c8db9bb61.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/e943dd04-0740-4b27-a702-d88c8db9bb61/225.jpg" width="225px"></div>
+		            <div class="item-name">Toro Y Moi What For?</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="90bc6a37-8576-4512-a28a-3a1bb50f70f4.html">
+		        <div class="item last">
+		            <div><img src="http://api.morrmusic.com/image/90bc6a37-8576-4512-a28a-3a1bb50f70f4/225.jpg" width="225px"></div>
+		            <div class="item-name">Sumac The Deal</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+	<div class="clear"></div>
+</div>
+			</div>
+
+			<span id="footer" class="small">© 2015 Anost</span>
+		</div>

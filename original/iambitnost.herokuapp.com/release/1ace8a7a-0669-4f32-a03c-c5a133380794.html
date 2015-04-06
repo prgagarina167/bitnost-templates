@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Bitnost records – spend your bitcoins on music!</title>
+		<link rel="stylesheet" media="all" href="../stylesheets/bootstrap.css">
+		<link rel="stylesheet" media="all" href="../stylesheets/shared.css">
+		<link rel="icon" type="image/png"href="../favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis:400,800' rel='stylesheet' type='text/css'>
+		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+</head>
+<body lang="en">
+	    <div class="container_4">
+	        <div id="logo">
+	            <h2><a href="../index.html"><img src="../logo_bit.png" width="65px"><br />Bitnost records</a></h2>
+	        </div>
+	        <div id="menu">
+	            <ul>
+                    <a href="../index.html"><li id="shop">About</li></a>
+                    <a href="../index.html"><li id="contact">Contact</li></a>
+                    <a href="../cart.html"><li id="home">Сart</li></a>
+                </ul>
+	        </div>
+	        <div id="submenu">
+	            <ul>           
+                    <a href=""><li id="menu_1">Just arrived</li></a>                    
+                    <a href=""><li id="menu_2">Recommended</li></a>
+                    <a href=""><li id="menu_3">Pre-orders</li></a> 
+                    <a href=""><li id="menu_3">Bestsellers</li></a> 
+                    <a href="../cart.html"><li id="menu_7">Remove old carts</li></a>  
+                </ul>
+	        </div>
+	        
+			<div id="content">
+				
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+var products = {
+  "06bde99b-ed40-406c-a946-d06f74303106": {
+    "gdid": "11979",
+    "uuid": "06bde99b-ed40-406c-a946-d06f74303106",
+    "uuid_release": "1ace8a7a-0669-4f32-a03c-c5a133380794",
+    "is_primary_format": "1",
+    "catalog_nr": "den209cd",
+    "uuid_format": "84619846-3d04-4219-a8fa-d95d32de0916",
+    "uuid_label": "01685a19-a408-4264-ad45-02413477162d",
+    "title": "Anti",
+    "display_artist": "The Eye Of Time",
+    "barcode": "4024572747954",
+    "release_date": "2015-04-03",
+    "release_date_usa": null,
+    "designer": null,
+    "tech_info": null,
+    "status": "backcatalog",
+    "weight": "125",
+    "length": null,
+    "width": null,
+    "height": null,
+    "discogs_id": "6813057",
+    "vat_type": "1",
+    "uuid_pricecode": "c21f4096-89bf-475c-a1cd-d332c9ac112b",
+    "price_to_customer": "13.99",
+    "uuid_playlist": "02a0b038-ea9a-455f-adfb-0121009b9036",
+    "explicit_lyrics": "0",
+    "main_artist": [
+      "67d1196c-1365-4160-a521-07881c670842"
+    ],
+    "format_name": "CD"
+  },
+  "60c4d34b-4775-420f-a006-296188e270d7": {
+    "gdid": "11980",
+    "uuid": "60c4d34b-4775-420f-a006-296188e270d7",
+    "uuid_release": "1ace8a7a-0669-4f32-a03c-c5a133380794",
+    "is_primary_format": "0",
+    "catalog_nr": "den209",
+    "uuid_format": "2249fb26-0880-44a5-acce-720b005a715a",
+    "uuid_label": "01685a19-a408-4264-ad45-02413477162d",
+    "title": "Anti",
+    "display_artist": "The Eye Of Time",
+    "barcode": "4024572747947",
+    "release_date": "2015-04-03",
+    "release_date_usa": null,
+    "designer": null,
+    "tech_info": "Thick sleeves + thick printed inner sleeves, 180g vinyl",
+    "status": "backcatalog",
+    "weight": "350",
+    "length": "31",
+    "width": "31",
+    "height": "0",
+    "discogs_id": null,
+    "vat_type": "1",
+    "uuid_pricecode": "64608276-fb9e-4300-a3fb-4086a9300f0a",
+    "price_to_customer": "19.99",
+    "uuid_playlist": "02a0b038-ea9a-455f-adfb-0121009b9036",
+    "explicit_lyrics": "0",
+    "main_artist": [
+      "67d1196c-1365-4160-a521-07881c670842"
+    ],
+    "format_name": "LP"
+  }
+}
+$(document).ready(function(){
+		$.each(products, function(key, value) {
+			$('#format_selector').append('<option value=' + value.uuid + '>' + value.format_name +'</option>');
+
+		})
+
+		var uuid = $('#format_selector option:selected').val();
+		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+		$('#price').val(products[uuid].price_to_customer);
+		$('#sku').val(uuid);
+		$('#format').val(products[uuid].format_name);
+
+		$('#format_selector').change(function(event){
+    		uuid = $('#format_selector option:selected').val();
+    		$('#detail-description h3').text(products[uuid].price_to_customer + ' Eur');
+    		$('#price').val(products[uuid].price_to_customer);
+    		$('#sku').val(uuid);
+    		$('#format').val(products[uuid].format_name);
+    	});
+});      
+</script>
+
+<div class="grid_detail">
+        <a href="http://api.morrmusic.com/image/1ace8a7a-0669-4f32-a03c-c5a133380794/450.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy" border="1px"><img src="http://api.morrmusic.com/image/1ace8a7a-0669-4f32-a03c-c5a133380794/450.jpg" height="450px" border="1px" style="border-color: black"></a><br /><br />
+        
+        <a href="http://api.morrmusic.com/image/1ace8a7a-0669-4f32-a03c-c5a133380794/100.jpg" rel="lightbox[detail]" title="Nichole dress Dark Navy"><img src="http://api.morrmusic.com/image/1ace8a7a-0669-4f32-a03c-c5a133380794/100.jpg" border="1px" width="100px" style="border-color: black"></a>&nbsp;&nbsp;	
+</div>
+
+<div id="detail-description" class="grid_2">
+	    <p class="big">The Eye Of Time<br /><br /><br /><strong>Anti</strong><br /><br /></p>
+	    <p class="description">THE EYE OF TIME is the Solo-Project of French musician Marc Euvrie. Euvrie's musical development is deeply connected with the French DIY punk and hardcore scene, though he has been classically trained as well. He started to play piano being 9 years old, composed his first pieces with 15 and studied cello at the conservatoire after finishing school. Euvrie was involved in several bands before he began to translate his personal reflection of our complex world into music, which initiated THE EYE OF TIME. His extensive self titled debut has been released in spring 2012 and exposed a dark look on the present, past and future: revealing an unnatural direction of the human being's existence, embodied by pregnant textures ranging from cinematic melodies, classic acoustic sounds to disfigured drones, noise, electronic manipulation, loops and samples. When putting out the second full length “Acoustic” in June 2014 one might have been surprised by the consequent change of focus. Looking for the motor, the personal needs to survive, he found himself experimenting with only Cello and Piano. Marc Euvrie’s alert critical mind has made him one of the most astute observers of today’s society. September 2014 marks the release of The Eye of Time forthcoming album “Anti”. Four letters taking us to the most extreme and darkest recesses, influenced by the likes of  Third Eye Foundation, Portishead, Neurosis, DJ Shadow, Björk, Sigur Ros, Edvard Grieg, Sergei Rachmaninov or Godspeed You! Black Emperor.<br /><br />"Anti" is darker than anything Marc Euvrie has created so far. The process of writing and recording took him 3 years. Right from the beginning the album was meant to be the dark side of "Acoustic", trying to sincerely translate a realistic point of view of our time into music: Industrial, despair, horrific. Where “Acoustic” was promising a glimpse of hope, “Anti” is confronting us with despair – pitch-black and constricting. A long cry in the darkest night, turning against the world, which bares all the frustration seeing the end of everything, but being incapable of talking. The few lighter shades scattered over the record convey a melancholy to something that is already dead. A brief review, seeing the beautiful things we made, the potential of humanity, considering that an end has been reached. ""Anti"" is finishing with a more peaceful song, minimalistic, as if we’ve accepted our fate. The whole record is construed around the title song "Anti". 14 minutes of sweeping industrial music leading into an apocalyptic finish screaming out loud along punishing beats. The EYE OF TIME’s output was never supposed to be understood as resignation. There’s no other option then showing society’s open wounds and bringing up the most painful subjects, as it seems there’s a strong need to face the darkest things before your very ears to finally wake up. And Mark notes: “I try to put the listeners as down in hell as possible that they don't have any choice then beat the ground and jump to the lights.” <br /><br />For fans of Third Eye Foundation, Portishead, DJ Shadow or Godspeed You! Black Emperor</p> 
+	    
+	    <h3></h3>
+	    <form action="/add" method="post" name="form">
+		    <select name="format_selector" class="form-control col-xs-1" id="format_selector"></select>
+
+			<br /><br />
+			<input id="format" type="hidden" name="format" value="" />
+			<input id="sku" type="hidden" name="sku" value="" />
+			<input id="price" type="hidden" name="price" value="" />
+			<input type="hidden" name="details" value="The Eye Of Time - Anti" />
+			<button type="submit" class="btn btn-default">Add to cart</button>
+		</form>				    
+</div>
+<div class="clear"></div><br /><br /><br />
+
+<div class="items-normal">
+	
+	    <h4 align="left">More releases</h4>
+
+	    
+			<a class="item-index" href="81061ece-7534-4202-a5ff-ca342480a430.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/81061ece-7534-4202-a5ff-ca342480a430/225.jpg" width="225px"></div>
+		            <div class="item-name">Ya Tosiba Ya Tosiba Remixes</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="32412030-f027-40ba-abd9-f5af2087c4f1.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/32412030-f027-40ba-abd9-f5af2087c4f1/225.jpg" width="225px"></div>
+		            <div class="item-name">Danielle de Picciotto Tacoma</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="e943dd04-0740-4b27-a702-d88c8db9bb61.html">
+		        <div class="item ">
+		            <div><img src="http://api.morrmusic.com/image/e943dd04-0740-4b27-a702-d88c8db9bb61/225.jpg" width="225px"></div>
+		            <div class="item-name">Toro Y Moi What For?</div>
+		            <div class="item-price">13.99 EUR</div>
+		        </div>
+	        </a>
+	    
+			<a class="item-index" href="90bc6a37-8576-4512-a28a-3a1bb50f70f4.html">
+		        <div class="item last">
+		            <div><img src="http://api.morrmusic.com/image/90bc6a37-8576-4512-a28a-3a1bb50f70f4/225.jpg" width="225px"></div>
+		            <div class="item-name">Sumac The Deal</div>
+		            <div class="item-price"> EUR</div>
+		        </div>
+	        </a>
+	    
+	<div class="clear"></div>
+</div>
+			</div>
+
+			<span id="footer" class="small">© 2015 Anost</span>
+		</div>

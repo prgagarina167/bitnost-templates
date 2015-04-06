@@ -4,17 +4,20 @@ var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
+var faker = require('faker');
 
 var lessFiles = ['./src/less/**'];
 var handlebarsFiles = ['./src/**/**.handlebars'];
 var jsFiles = './src/js/**.js';
+var imgFiles = './src/img/**';
 
-gulp.task('default', ['bowercopy', 'browser-sync', 'less', 'js', 'handlebars'], function() {
+gulp.task('default', ['bowercopy', 'browser-sync', 'less', 'js', 'img', 'handlebars'], function() {
 
 
   gulp.watch(lessFiles, { interval: 1000 }, ['less']);
-  gulp.watch(htmlFiles, { interval: 1000 }, ['handlebars']);
+  gulp.watch(handlebarsFiles, { interval: 1000 }, ['handlebars']);
   gulp.watch(jsFiles, { interval: 1000 }, ['js']);
+  gulp.watch(imgFiles, { interval: 1000}, ['img'])
 
 });
 
@@ -39,10 +42,25 @@ gulp.task('js', function(){
   .pipe(reload({stream:true}));
 });
 
+gulp.task('img', function(){
+  gulp.src(imgFiles)
+  .pipe(gulp.dest('build/img'))
+  .pipe(reload({stream:true}));
+});
+
 gulp.task('handlebars', function(){
-var templateData = {},
+var templateData = {albuns: []},
 options = {
   batch : ['./src/partials'],
+}
+var albumCount = 50;
+for(var i = 0; i < albumCount; i++ ){
+  templateData.albuns.push({
+    cover: faker.image.image(),
+    title: faker.lorem.sentence(),
+    author: faker.name.firstName()+' '+faker.name.lastName(),
+  }
+  );
 }
 
 gulp.src('src/index.handlebars')
@@ -51,7 +69,7 @@ gulp.src('src/index.handlebars')
   .pipe(gulp.dest('build'));
 
 
-  gulp.src(htmlFiles)
+  gulp.src(handlebarsFiles)
   .pipe(gulp.dest('build'))
   .pipe(reload({stream:true}));
 });
