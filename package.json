@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-less": "*",
+    "bower": "*",
+    "browser-sync": "*",
+    "gulp-compile-handlebars": "*",
+    "gulp-rename": "*"
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/bower install"
+  }
+}
