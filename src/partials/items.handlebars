@@ -1,10 +1,17 @@
 <div class="items">
  {{#each albuns}}
  <div class="item">
-		<img class="cover" src="{{this.cover}}" width=225 height=225 />
+		<img class="cover smb" src="{{this.cover}}" width=225 height=225 />
 		<div class="author">{{this.author}}</div>
 		<div class="title">{{this.title}}</div>
 		<div class="prices">{{this.prices}}</div>
+		<div class="releases">
+		{{#each this.releases}}
+			<div class="release">
+				<span class="type">{{this.type}}</span> <span class="price">{{this.price}} €</span>
+			</div>
+		{{/each}}
+		</div>
 	</div>
 	{{/each}}
 	

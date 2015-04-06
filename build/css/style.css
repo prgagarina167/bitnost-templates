@@ -6626,6 +6626,7 @@ body {
 .items {
   font-size: 0;
   text-align: center;
+  padding: 0 10%;
 }
 .items .item {
   text-align: left;
@@ -6637,6 +6638,11 @@ body {
 }
 .items .item .title {
   font-weight: bold;
+}
+.items .item .releases {
+  margin-top: 4px;
+  line-height: 1.5;
+  font-size: 0.8em;
 }
 /* ITEMS */
 footer {

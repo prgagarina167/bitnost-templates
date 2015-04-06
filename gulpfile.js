@@ -53,12 +53,23 @@ var templateData = {albuns: []},
 options = {
   batch : ['./src/partials'],
 }
-var albumCount = 50;
+var albumCount = 30;
+var releaseTypes = ['CD', 'LP', 'EP', 'MC', '7"'];
 for(var i = 0; i < albumCount; i++ ){
+  releaseTypes.sort( function() { return 0.5 - Math.random() } );
+  var releaseCount = Math.floor((Math.random() * releaseTypes.length) + 1);
+  var releases = []
+  for(var j = 0; j < releaseCount; j++){
+    releases.push({
+      type: releaseTypes[j],
+      price: (faker.finance.amount()/10).toFixed(2)
+      });
+  } 
   templateData.albuns.push({
     cover: faker.image.image(),
     title: faker.lorem.sentence(),
     author: faker.name.firstName()+' '+faker.name.lastName(),
+    releases: releases
   }
   );
 }
