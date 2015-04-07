@@ -5,12 +5,24 @@ body {
 	margin: 64px;  
 }
 
+.popover-content {
+	text-align: center;
+}
+
+/* FIRST PAGE HEADER */
+.firstPageHeader a:hover {
+	text-decoration: none;
+}
+
+/* END FIRST PAGE HEADER */
+
 /* ITEMS */
 .items{ 
 	font-size: 0;
 	text-align: center;
 	padding: 0 10%;
 	.item{
+		position: relative;
 		text-align: left;
 		font-size: 14px;
 		width: 225px;
@@ -24,6 +36,26 @@ body {
 			margin-top: 4px;
 			line-height: 1.5;
 			font-size: 0.8em;
+		}
+		.actionButtons {
+			display: none;
+			position: absolute;
+			top: 40px;
+			text-align: center;
+			width: 100%;
+			a {
+				display: block;
+				margin-left: 40px;
+				margin-right: 40px;
+			}
+		}
+	}
+	.item:hover {
+		.cover {
+			opacity: 0.4;
+		}
+		.actionButtons{
+			display: block;
 		}
 	}
 }

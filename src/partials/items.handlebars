@@ -12,6 +12,22 @@
 			</div>
 		{{/each}}
 		</div>
+		<div class="actionButtons mmt">
+			<a class="btn btn-primary xsmb detailsBtn" href="details.html">view details</a>
+			{{#unless this.releaseCount}}
+				<a class="btn btn-primary xsmb buyBtn singleChoice" href="buy.html">Add <b>{{this.releases.0.type}}</b> to Cart</a>
+			{{else}}
+			<a type="button" class="btn btn-primary buyBtn multipleChoice" data-container=".item" data-toggle="popover" role="button" tabindex="0" data-html="true" data-placement="bottom" data-content=" Pick format:<br/>
+			
+			{{#each this.releases}}
+				<a href='buy.html'>{{this.type}}</a><br/>
+			{{/each}}
+			">
+			  Add to Cart
+			</a>
+			{{/unless}}
+
+		</div>
 	</div>
 	{{/each}}
 	

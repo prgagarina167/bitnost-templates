@@ -62,14 +62,15 @@ for(var i = 0; i < albumCount; i++ ){
   for(var j = 0; j < releaseCount; j++){
     releases.push({
       type: releaseTypes[j],
-      price: (faker.finance.amount()/10).toFixed(2)
+      price: (faker.finance.amount()/10).toFixed(2),      
       });
   } 
   templateData.albuns.push({
     cover: faker.image.image(),
     title: faker.lorem.sentence(),
     author: faker.name.firstName()+' '+faker.name.lastName(),
-    releases: releases
+    releases: releases,
+    releaseCount: releaseCount-1
   }
   );
 }
