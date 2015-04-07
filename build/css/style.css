@@ -3071,7 +3071,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
   color: #ffffff;
   background-color: #f95825;
-  border-color: #f8450c;
+  border-color: #f95825;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -3081,7 +3081,7 @@ fieldset[disabled] .btn-default.active {
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
   background-color: #e53c06;
-  border-color: #c23305;
+  border-color: #db3906;
 }
 .btn-primary:active,
 .btn-primary.active,
@@ -3107,7 +3107,7 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
   background-color: #f95825;
-  border-color: #f8450c;
+  border-color: #f95825;
 }
 .btn-primary .badge {
   color: #f95825;
@@ -6630,6 +6630,36 @@ body {
   text-decoration: none;
 }
 /* END FIRST PAGE HEADER */
+/* CART INFO */
+.cartInfo {
+  display: block;
+  position: absolute;
+  position: fixed;
+  z-index: 10;
+  right: 10%;
+  top: 0;
+  background-color: #f95825;
+  padding: 6px 10px 6px 12px;
+  color: white;
+  border-radius: 0 0 4px 4px;
+}
+.cartInfo .glyphicon-shopping-cart {
+  padding-left: 4px;
+  padding-right: 6px;
+}
+.cartInfo .infoText {
+  display: none;
+}
+.cartInfo:hover {
+  color: white;
+  text-decoration: none;
+  padding: 6px 18px 6px 20px;
+  margin-right: -6px;
+}
+.cartInfo:hover .infoText {
+  display: inline-block;
+}
+/* END CART INFO*/
 /* ITEMS */
 .items {
   font-size: 0;

@@ -10,8 +10,9 @@ var lessFiles = ['./src/less/**'];
 var handlebarsFiles = ['./src/**/**.handlebars'];
 var jsFiles = './src/js/**.js';
 var imgFiles = './src/img/**';
+var fontFiles = './bower_components/bootstrap/fonts/**'
 
-gulp.task('default', ['bowercopy', 'browser-sync', 'less', 'js', 'img', 'handlebars'], function() {
+gulp.task('default', ['bowercopy', 'browser-sync', 'less', 'js', 'img', 'handlebars', 'fonts'], function() {
 
 
   gulp.watch(lessFiles, { interval: 1000 }, ['less']);
@@ -45,6 +46,12 @@ gulp.task('js', function(){
 gulp.task('img', function(){
   gulp.src(imgFiles)
   .pipe(gulp.dest('build/img'))
+  .pipe(reload({stream:true}));
+});
+
+gulp.task('fonts', function(){
+  gulp.src(fontFiles)
+  .pipe(gulp.dest('build/fonts'))
   .pipe(reload({stream:true}));
 });
 
