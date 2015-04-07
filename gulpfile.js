@@ -78,10 +78,6 @@ for(var i = 0; i < albumCount; i++ ){
 gulp.src('src/index.handlebars')
   .pipe(handlebars(templateData, options))
   .pipe(rename('index.html'))
-  .pipe(gulp.dest('build'));
-
-
-  gulp.src(handlebarsFiles)
   .pipe(gulp.dest('build'))
   .pipe(reload({stream:true}));
 });
