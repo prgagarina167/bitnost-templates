@@ -6666,8 +6666,9 @@ body {
 /* ITEMS */
 .items {
   font-size: 0;
-  text-align: center;
-  padding: 0 10%;
+  text-align: left;
+  margin-left: -12px;
+  margin-right: -12px;
 }
 .items .item {
   position: relative;
