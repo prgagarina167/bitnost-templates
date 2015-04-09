@@ -6620,12 +6620,15 @@ button.close {
   margin-left: 120px;
 }
 body {
-  margin: 64px;
+  margin: 0 64px 64px;
 }
 .popover-content {
   text-align: center;
 }
 /* FIRST PAGE HEADER */
+.firstPageHeader {
+  margin-top: 15vh;
+}
 .firstPageHeader a:hover {
   text-decoration: none;
 }
