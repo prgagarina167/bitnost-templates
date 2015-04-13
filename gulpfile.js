@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var handlebars = require('gulp-compile-handlebars');
 var rename = require('gulp-rename');
+var del = require('del');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
 var faker = require('faker');
@@ -12,14 +13,22 @@ var jsFiles = './src/js/**.js';
 var imgFiles = './src/img/**';
 var fontFiles = './bower_components/bootstrap/fonts/**'
 
-gulp.task('default', ['bowercopy', 'browser-sync', 'less', 'js', 'img', 'handlebars', 'fonts'], function() {
-
+gulp.task('default', ['clean'], function() {
+  gulp.run('base');  
 
   gulp.watch(lessFiles, { interval: 1000 }, ['less']);
   gulp.watch(handlebarsFiles, { interval: 1000 }, ['handlebars']);
   gulp.watch(jsFiles, { interval: 1000 }, ['js']);
   gulp.watch(imgFiles, { interval: 1000}, ['img'])
 
+  });
+
+gulp.task('base', ['bowercopy', 'browser-sync', 'less', 'js', 'img', 'handlebars', 'fonts'], function(){});
+
+gulp.task('clean', function (cb) {
+  del([
+    'build/**'
+  ], cb);
 });
 
 gulp.task('less', function() {
