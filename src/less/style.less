@@ -2,12 +2,20 @@
 @import "utilities.less";
 
 body {
-	margin: 0 64px 64px;  
+	margin: 0 100px 0;  
+}
+a {
+   outline: 0 !important;
+}
+
+h1 {
+	font-family: "Dosis", sans-serif;
 }
 
 .popover-content {
 	text-align: center;
 }
+
 
 /* FIRST PAGE HEADER */
 .firstPageHeader {
@@ -42,22 +50,38 @@ body {
 }
 .cartInfo:hover {
 	color:white;
+	background-color: darken(@brand-primary, 10%);
 	text-decoration: none;
-	padding: 6px 18px 6px 20px;
-	margin-right: -6px;
 	.infoText {
 		display: inline-block;
 	}
 }
+.cartInfo:active {
+	background-color: darken(@brand-primary, 20%);
+}
 
 /* END CART INFO*/
+
+/* BUY LINKS */
+.buyLink{
+	.textDescription {
+		display: none;
+	}
+}
+.buyLink:hover{
+	text-decoration: none;
+	.textDescription {
+		display: inline;
+	}
+}
+/* END BUY LINKS */
 
 /* ITEMS */
 .items{ 
 	font-size: 0;
 	text-align: left;
-	margin-left: -12px;
-	margin-right: -12px;
+	margin-left: auto;
+	margin-right: auto;
 	.item{
 		position: relative;
 		text-align: left;
@@ -93,6 +117,9 @@ body {
 		}
 		.actionButtons{
 			display: block;
+		}
+		.buyLink {
+			display: inline-block;
 		}
 	}
 }
@@ -147,10 +174,10 @@ footer {
 	line-height: 0;
 	position: relative;
 	z-index:2;
-  .content {
+	.content {
 		background-color: white;
- 		padding: 0 12px;
- 	}
+		padding: 0 12px;
+	}
 }
 
 footer:before {
