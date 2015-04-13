@@ -24,9 +24,9 @@ gulp.task('default', ['bowercopy', 'browser-sync', 'less', 'js', 'img', 'handleb
 
 gulp.task('less', function() {
   gulp.src('src/less/style.less')
-    .pipe(less())
-    .pipe(gulp.dest('build/css/'))
-    .pipe(reload({stream:true})); 
+  .pipe(less())
+  .pipe(gulp.dest('build/css/'))
+  .pipe(reload({stream:true})); 
   });
 
 gulp.task('bowercopy', function(){
@@ -35,64 +35,83 @@ gulp.task('bowercopy', function(){
     'bower_components/jquery/dist/jquery.min.js'
     ])
   .pipe(gulp.dest('build/js/'))
-});
+  });
 
 gulp.task('js', function(){
   gulp.src(jsFiles)
   .pipe(gulp.dest('build/js'))
   .pipe(reload({stream:true}));
-});
+  });
 
 gulp.task('img', function(){
   gulp.src(imgFiles)
   .pipe(gulp.dest('build/img'))
   .pipe(reload({stream:true}));
-});
+  });
 
 gulp.task('fonts', function(){
   gulp.src(fontFiles)
   .pipe(gulp.dest('build/fonts'))
   .pipe(reload({stream:true}));
-});
+  });
 
 gulp.task('handlebars', function(){
-var templateData = {albuns: []},
-options = {
-  batch : ['./src/partials'],
-}
-var albumCount = 30;
-var releaseTypes = ['CD', 'LP', 'EP', 'MC', '7"'];
-for(var i = 0; i < albumCount; i++ ){
-  releaseTypes.sort( function() { return 0.5 - Math.random() } );
-  var releaseCount = Math.floor((Math.random() * releaseTypes.length) + 1);
-  var releases = []
-  for(var j = 0; j < releaseCount; j++){
-    releases.push({
-      type: releaseTypes[j],
-      price: (faker.finance.amount()/10).toFixed(2),      
-      });
-  } 
-  templateData.albuns.push({
-    cover: faker.image.image(),
-    title: faker.lorem.sentence(),
-    author: faker.name.firstName()+' '+faker.name.lastName(),
-    releases: releases,
-    releaseCount: releaseCount-1
+  var templateData = {albuns: []},
+  options = {
+    batch : ['./src/partials'],
   }
-  );
-}
+  var albumCount = 30;
+  var releaseTypes = ['CD', 'LP', 'EP', 'MC', '7"'];
+  var genresNames = ['House', 'Disco', 'Indie / Pop', 'Alternative', 'Experimental', 'Electronica'];
 
-gulp.src('src/index.handlebars')
+  for(var i = 0; i < albumCount; i++ ){
+    releaseTypes.sort( function() { return 0.5 - Math.random() } );
+    var releaseCount = Math.floor((Math.random() * releaseTypes.length) + 1);
+    genresNames.sort( function() { return 0.5 - Math.random() } );
+    var genresCount = Math.floor((Math.random() * genresNames.length) + 1);
+    var releases = []
+    for(var j = 0; j < releaseCount; j++){
+      releases.push({
+        type: releaseTypes[j],
+        price: (faker.finance.amount()/10).toFixed(2),      
+        });
+    }
+    var genres = [];
+    for(var k = 0; k < genresCount; k++){
+      genres.push(genresNames[k]);
+    }
+    templateData.albuns.push({
+      cover: faker.image.image(),
+      otherImages: [faker.image.image(), faker.image.image(), faker.image.image()],
+      imageCount: 4,
+      title: faker.lorem.sentence(),
+      author: faker.name.firstName()+' '+faker.name.lastName(),
+      releases: releases,
+      releaseCount: releaseCount-1,
+      description: faker.lorem.paragraphs(),
+      genres: genres.join(', ')
+
+    }
+    );
+  }
+  gulp.src('src/index.handlebars')
   .pipe(handlebars(templateData, options))
   .pipe(rename('index.html'))
   .pipe(gulp.dest('build'))
   .pipe(reload({stream:true}));
+
+  gulp.src('src/release.handlebars')
+  .pipe(handlebars(templateData, options))
+  .pipe(rename('release.html'))
+  .pipe(gulp.dest('build'))
+  .pipe(reload({stream:true}));
+
 });
 
 gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-            baseDir: "./build"
-        }
+  browserSync({
+    server: {
+      baseDir: "./build"
+    }
     });
-});
+  });

@@ -1,0 +1,33 @@
+<div class="row singleItem lmt xlmb">
+	<div class="images col-sm-5 col-md-offset-1">
+		<div class="slideshow">
+			<div class="items">
+				<img class="img-responsive" src="{{albuns.0.cover}}" width=800 height=800 />
+				{{#each albuns.0.otherImages}}
+				<img class="img-responsive" src="{{this}}" width=800 height=800 />
+				{{/each}}
+			</div>
+			<div class="slideshowControls">
+				<div class="previous"><span class="glyphicon glyphicon-chevron-left"></span></div>
+				<div class="next"><span class="glyphicon glyphicon-chevron-right"></span></div>
+			</div>
+		</div>
+		<div class="text-center xsmt text-muted imageNav"><span id="curImageNr">1</span> / {{albuns.0.imageCount}}</div>
+	</div>
+	<div class="info col-sm-5">
+		<h2 class="author">{{albuns.0.author}}</h2>
+		<h3 class="title">{{albuns.0.title}}</h3>
+		<div class="description">
+			{{albuns.0.description}}
+		</div>
+		<div class="genre smt"><b class="genreListTitle">Genre:</b> <span class="genreList">{{albuns.0.genres}}</span></div>
+		<div class="formats mmt">
+			<h4 class="formtTitle">Available formats</h4>
+			{{#each albuns.0.releases}}
+			<div class="release xsmb">
+				<a class=" buyLink" href="buy.html"> <span class="type">{{this.type}}</span> <span class="price">{{this.price}} €</span> <span class="xsml" href="buy.html"><i class="glyphicon glyphicon-shopping-cart"></i> <span class="textDescription">add to cart</span></span></a>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</div>
