@@ -8,6 +8,24 @@ $(function () {
   	}
 	});*/
 
+/* Collapse Menu */
+	$(window).scroll(function(){
+		var headerEl = $('header');
+		var headerHeight = headerEl.height();
+		headerEl.css('height', headerHeight+'px');
+		if($(window).scrollTop() > headerHeight+50){
+			headerEl.addClass('collapsed');
+			headerEl.removeClass('hiddenHeader');
+		}else if($(window).scrollTop() > headerHeight){
+			headerEl.addClass('hiddenHeader');
+			headerEl.removeClass('collapsed');
+		}else {
+			headerEl.removeClass('collapsed');
+			headerEl.removeClass('hiddenHeader');
+
+		}
+	});
+
 //only show one row of Related items
 	var oneRowRelated = function(){
 		if($('.release').length){

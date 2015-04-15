@@ -17,15 +17,84 @@ h1 {
 }
 
 
-/* FIRST PAGE HEADER */
-.firstPageHeader {
+/* HEADER */
+
+header {
+	.headOnly {
+		display: none;
+	}
+}
+.content {
+	height: auto;
+	-webkit-transition: all 0.25s; /* Safari */
+  transition: all 0.25s;
+}
+
+.pageHeader {
 	margin-top: 8vh;
+	text-align: center;
 	a:hover {
 		text-decoration: none;
 	}
 }
 
-/* END FIRST PAGE HEADER */
+
+nav ul {
+	list-style: none;
+	padding-left: 0;
+	li {
+		display: inline-block;
+		padding: 0 15px 0 0;
+	}
+}
+	header.hiddenHeader {
+		h1 { 
+			position: relative;
+			top: -2em;
+		}
+		.content {
+			height: 0;
+		}
+	}
+
+	header.collapsed {
+		.contents {
+			position: fixed;
+			top: 0;
+			background: white;
+			z-index: 10;	
+			right: 0;
+			left: 0;
+		}
+		.fullLogo {
+			display: none;
+		}
+		.headOnly {
+			display: inline-block;
+			padding-left: 15px;
+		}
+		.pageHeader {
+			margin-top: 6px;
+			text-align: left;
+			min-height: 70px;
+		}
+		h1 {
+			font-size: 24px;
+			display: inline;
+			padding-left: 22px; 
+			text-align: left;
+			-webkit-transition: all 0.25s; /* Safari */
+  		transition: all 0.25s;
+  		top: 8px;
+  		position: relative;
+		}
+		nav {
+			position: absolute;
+			top: 26px;
+			left: 300px;
+		}
+	}
+/* HEADER */
 
 
 /* CART INFO */
