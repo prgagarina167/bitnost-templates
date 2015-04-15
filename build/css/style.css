@@ -6683,16 +6683,20 @@ h1 {
 }
 /* END BUY LINKS */
 /* ITEMS */
-.releaseItems {
-  font-size: 0;
-  text-align: center;
-  display: inline-block;
-  position: relative;
+.home .releaseItems {
   margin-left: -80px;
   margin-right: -80px;
 }
+.releaseItems {
+  font-size: 0;
+  text-align: center;
+  position: relative;
+}
 .releaseItems h3 {
   text-align: left;
+}
+.releaseItems .item-list {
+  position: relative;
 }
 .releaseItems .item {
   position: relative;
@@ -6705,6 +6709,7 @@ h1 {
 }
 .releaseItems .item .cover {
   position: relative;
+  display: block;
 }
 .releaseItems .item .freeMp3 {
   position: absolute;

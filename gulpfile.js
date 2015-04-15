@@ -65,7 +65,7 @@ gulp.task('fonts', function(){
   });
 
 gulp.task('handlebars', function(){
-  var templateData = {albuns: []},
+  var templateData = {albuns: [], seeAlso: []},
   options = {
     batch : ['./src/partials'],
   }
@@ -92,6 +92,7 @@ gulp.task('handlebars', function(){
     templateData.albuns.push({
       cover: faker.image.image(),
       otherImages: [faker.image.image(), faker.image.image(), faker.image.image()],
+      asFreeMp3: Math.round(Math.random()),
       imageCount: 4,
       title: faker.lorem.sentence(),
       author: faker.name.firstName()+' '+faker.name.lastName(),
@@ -103,6 +104,7 @@ gulp.task('handlebars', function(){
     }
     );
   }
+  templateData.seeAlso = templateData.albuns.splice(0,6);
   gulp.src('src/index.handlebars')
   .pipe(handlebars(templateData, options))
   .pipe(rename('index.html'))
@@ -120,7 +122,7 @@ gulp.task('handlebars', function(){
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-      baseDir: "./build"
+      baseDir: "./build",
     }
     });
   });

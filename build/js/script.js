@@ -8,6 +8,20 @@ $(function () {
   	}
 	});*/
 
+//only show one row of Related items
+	var oneRowRelated = function(){
+		if($('.release').length){
+			$( ".release .item" ).each(function() {
+	 			$(this).css('display', 'inline-block');
+				if($(this).position().top > 0){
+		 			$(this).css('display', 'none');
+	 			}
+			});
+
+		}
+	}
+	oneRowRelated();
+
 	//ONLY WAY TO ALIGN Title to releases
 	var alignReleaseTitle = function(){
 		if ( $('.releaseItems .item').length ) {
@@ -19,9 +33,9 @@ $(function () {
 	alignReleaseTitle();
 
 	$( window ).resize(function() {
+		oneRowRelated();
 		alignReleaseTitle();
 	});
-
 
 //animated Cart
 	$('body').append('<span id="animatedCart" class="glyphicon glyphicon-shopping-cart"></span>');
