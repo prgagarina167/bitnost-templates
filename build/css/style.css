@@ -6683,13 +6683,18 @@ h1 {
 }
 /* END BUY LINKS */
 /* ITEMS */
-.items {
+.releaseItems {
   font-size: 0;
-  text-align: left;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  margin-left: -80px;
+  margin-right: -80px;
 }
-.items .item {
+.releaseItems h3 {
+  text-align: left;
+}
+.releaseItems .item {
   position: relative;
   text-align: left;
   font-size: 14px;
@@ -6698,33 +6703,33 @@ h1 {
   vertical-align: top;
   margin: 12px;
 }
-.items .item .title {
+.releaseItems .item .title {
   font-weight: bold;
 }
-.items .item .releases {
+.releaseItems .item .releases {
   margin-top: 4px;
   line-height: 1.5;
   font-size: 0.8em;
 }
-.items .item .actionButtons {
+.releaseItems .item .actionButtons {
   display: none;
   position: absolute;
   top: 40px;
   text-align: center;
   width: 100%;
 }
-.items .item .actionButtons a {
+.releaseItems .item .actionButtons a {
   display: block;
   margin-left: 40px;
   margin-right: 40px;
 }
-.items .item:hover .cover {
+.releaseItems .item:hover .cover {
   opacity: 0.4;
 }
-.items .item:hover .actionButtons {
+.releaseItems .item:hover .actionButtons {
   display: block;
 }
-.items .item:hover .buyLink {
+.releaseItems .item:hover .buyLink {
   display: inline-block;
 }
 /* END ITEMS */

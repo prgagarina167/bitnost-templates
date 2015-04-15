@@ -1,12 +1,27 @@
 "use strict";
 $(function () {
-  $('[data-toggle="popover"]').popover()
+  /*$('[data-toggle="popover"]').popover()
 
   $( ".item" ).mouseleave(function() {
   	if($(this)[0] !== $('.popover').parent()[0]){
   		$('.popover').popover('hide');
   	}
+	});*/
+
+	//ONLY WAY TO ALIGN Title to releases
+	var alignReleaseTitle = function(){
+		if ( $('.releaseItems .item').length ) {
+			var firstItemPos = $('.releaseItems .item').eq(0).position();
+			var titlePosition = firstItemPos.left+15;
+			$('.releaseItems h3').css('marginLeft', titlePosition+'px');
+		}
+	}
+	alignReleaseTitle();
+
+	$( window ).resize(function() {
+		alignReleaseTitle();
 	});
+
 
 //animated Cart
 	$('body').append('<span id="animatedCart" class="glyphicon glyphicon-shopping-cart"></span>');
