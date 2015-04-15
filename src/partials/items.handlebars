@@ -1,7 +1,12 @@
 <div class="item-list">
  {{#each albuns}}
  <div class="item">
-		<img class="cover smb" src="{{this.cover}}" width=225 height=225 />
+ 		<div class="cover smb">
+			<img src="{{this.cover}}" width=225 height=225 />
+			{{#if this.asFreeMp3}}
+			<div class="freeMp3">+ free mp3</div>
+			{{/if}}
+		</div>
 		<div class="author"><a href="filter.html?{{this.author}}">{{this.author}}</a></div>
 		<div class="title"><a href="details.html{{this.title}}">{{this.title}}</a></div>
 		<div class="prices">{{this.prices}}</div>
