@@ -44,8 +44,11 @@ $(function () {
 	var alignReleaseTitle = function(){
 		if ( $('.releaseItems .item').length ) {
 			var firstItemPos = $('.releaseItems .item').eq(0).position();
-			var titlePosition = firstItemPos.left+15;
-			$('.releaseItems h3').css('marginLeft', titlePosition+'px');
+			var releasesPos = $('.releases').eq(0).position();
+			var titlePosition = releasesPos.left-firstItemPos.left-30;
+			$('.releases h3').css('marginLeft', titlePosition+'px');
+			$('.filters').css('marginLeft', titlePosition+'px');
+
 		}
 	}
 	alignReleaseTitle();

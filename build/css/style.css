@@ -6660,16 +6660,29 @@ header.hiddenHeader h1 {
   position: relative;
   top: -2em;
 }
-header.hiddenHeader .content {
+header.hiddenHeader .contents {
   height: 0;
+}
+header.hiddenHeader .pageHeader {
+  height: 0;
+}
+header.hiddenHeader .headOnly {
+  position: absolute;
+  display: block;
+  top: -100px;
 }
 header.collapsed .contents {
   position: fixed;
   top: 0;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   z-index: 10;
   right: 0;
   left: 0;
+  border-bottom: 1px solid #e53c06;
+  height: auto;
+  -webkit-transition: height 0.25s;
+  /* Safari */
+  transition: height 0.25s;
 }
 header.collapsed .fullLogo {
   display: none;
@@ -6677,20 +6690,23 @@ header.collapsed .fullLogo {
 header.collapsed .headOnly {
   display: inline-block;
   padding-left: 15px;
+  top: 133px;
+  transition: top 0.2s;
 }
 header.collapsed .pageHeader {
   margin-top: 6px;
   text-align: left;
-  min-height: 70px;
+  height: 70px;
+  transition: all 0.2s;
 }
 header.collapsed h1 {
   font-size: 24px;
   display: inline;
   padding-left: 22px;
   text-align: left;
-  -webkit-transition: all 0.25s;
+  -webkit-transition: top 0.25s;
   /* Safari */
-  transition: all 0.25s;
+  transition: top 0.25s;
   top: 8px;
   position: relative;
 }
@@ -6748,13 +6764,16 @@ header.collapsed nav {
   margin-left: -80px;
   margin-right: -80px;
 }
+.releases .filters {
+  text-align: center;
+}
+.releases .filters a {
+  text-decoration: underline;
+}
 .releaseItems {
   font-size: 0;
   text-align: center;
   position: relative;
-}
-.releaseItems h3 {
-  text-align: left;
 }
 .releaseItems .item-list {
   position: relative;
