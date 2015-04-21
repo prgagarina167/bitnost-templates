@@ -11,16 +11,20 @@ $(function () {
 /* Collapse Menu */
 	$(window).scroll(function(){
 		var headerEl = $('header');
+		var cartEl = $('.cartBlock');
 		var headerHeight = headerEl.height();
 		headerEl.css('height', headerHeight+'px');
-		if($(window).scrollTop() > headerHeight+50){
+		if($(window).scrollTop() > headerHeight+300){
 			headerEl.addClass('collapsed');
+			cartEl.addClass('onCollapsedMenu');
 			headerEl.removeClass('hiddenHeader');
 		}else if($(window).scrollTop() > headerHeight){
 			headerEl.addClass('hiddenHeader');
+			cartEl.removeClass('onCollapsedMenu');
 			headerEl.removeClass('collapsed');
 		}else {
 			headerEl.removeClass('collapsed');
+			cartEl.removeClass('onCollapsedMenu');
 			headerEl.removeClass('hiddenHeader');
 
 		}

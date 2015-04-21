@@ -6717,46 +6717,77 @@ header.collapsed nav {
 }
 /* HEADER */
 /* CART INFO */
-.cartInfo {
+.cartBlock {
   display: block;
   position: absolute;
   position: fixed;
   z-index: 10;
   right: 10%;
   top: 0;
+}
+.cartBlock .cartLabel {
+  vertical-align: top;
+  display: inline-block;
+  padding-top: 6px;
+  padding-right: 4px;
+  color: #888;
+}
+.cartBlock .cartInfo {
+  display: inline-block;
   background-color: #f95825;
   padding: 6px 10px 6px 12px;
   color: white;
   border-radius: 0 0 4px 4px;
 }
-.cartInfo .glyphicon-shopping-cart {
+.cartBlock .cartInfo .glyphicon-shopping-cart {
   padding-left: 4px;
   padding-right: 6px;
 }
-.cartInfo .infoText {
+.cartBlock .cartInfo .infoText {
   display: none;
 }
-.cartInfo:hover {
+.cartBlock .cartInfo:active {
+  background-color: #b32f05;
+}
+.cartBlock:hover .cartLabel {
+  opacity: 0;
+}
+.cartBlock:hover .cartInfo {
   color: white;
   background-color: #e53c06;
   text-decoration: none;
 }
-.cartInfo:hover .infoText {
+.cartBlock:hover .infoText {
   display: inline-block;
 }
-.cartInfo:active {
-  background-color: #b32f05;
+.cartBlock.onCollapsedMenu {
+  top: 22px;
+}
+.cartBlock.onCollapsedMenu .cartInfo {
+  border-radius: 4px !important;
 }
 /* END CART INFO*/
 /* BUY LINKS */
+.buyLink .type {
+  font-weight: bold;
+  display: inline-block;
+  min-width: 1.75em;
+}
+.buyLink .price {
+  min-width: 3em;
+  display: inline-block;
+  text-align: right;
+}
 .buyLink .textDescription {
-  display: none;
+  color: #666;
 }
 .buyLink:hover {
   text-decoration: none;
+  color: #000;
 }
 .buyLink:hover .textDescription {
-  display: inline;
+  color: #f95825;
+  text-decoration: underline;
 }
 /* END BUY LINKS */
 /* ITEMS */
@@ -6764,11 +6795,17 @@ header.collapsed nav {
   margin-left: -80px;
   margin-right: -80px;
 }
-.releases .filters {
+.albums .filters .nav-tabs {
   text-align: center;
+  border-color: #f95825;
 }
-.releases .filters a {
-  text-decoration: underline;
+.albums .filters .nav-tabs li {
+  float: none;
+  display: inline-block;
+}
+.albums .filters .nav-tabs .active a {
+  border-color: #f95825;
+  border-bottom-color: white;
 }
 .releaseItems {
   font-size: 0;
@@ -6807,7 +6844,9 @@ header.collapsed nav {
 .releaseItems .item .releases {
   margin-top: 4px;
   line-height: 1.5;
-  font-size: 0.8em;
+}
+.releaseItems .item .releases .release {
+  font-size: 13px;
 }
 .releaseItems .item .actionButtons {
   display: none;

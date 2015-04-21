@@ -8,12 +8,11 @@
 			{{/if}}
 		</a>
 		<div class="author"><a href="filter.html?{{this.author}}">{{this.author}}</a></div>
-		<div class="title"><a href="details.html{{this.title}}">{{this.title}}</a></div>
-		<div class="prices">{{this.prices}}</div>
+		<div class="title smb"><a href="details.html{{this.title}}">{{this.title}}</a></div>
 		<div class="releases">
 		{{#each this.releases}}
 			<div class="release">
-				<a class=" buyLink" href="buy.html"> <span class="type">{{this.type}}</span> <span class="price">{{this.price}} €</span> <span class="xsml" href="buy.html"><i class="glyphicon glyphicon-shopping-cart"></i> <span class="textDescription">add to cart</span></span></a>
+				<a class="buyLink" href="buy.html"> <span class="type">{{this.type}}</span> <span class="price">{{this.price}}€</span> <span class="xsml" href="buy.html"><span class="textDescription">Add to cart</span></span></a>
 			</div>
 		{{/each}}
 		</div>
