@@ -11,16 +11,20 @@ $(function () {
 /* Collapse Menu */
 	$(window).scroll(function(){
 		var headerEl = $('header');
+		var cartEl = $('.cartBlock');
 		var headerHeight = headerEl.height();
 		headerEl.css('height', headerHeight+'px');
-		if($(window).scrollTop() > headerHeight+50){
+		if($(window).scrollTop() > headerHeight+300){
 			headerEl.addClass('collapsed');
+			cartEl.addClass('onCollapsedMenu');
 			headerEl.removeClass('hiddenHeader');
 		}else if($(window).scrollTop() > headerHeight){
 			headerEl.addClass('hiddenHeader');
+			cartEl.removeClass('onCollapsedMenu');
 			headerEl.removeClass('collapsed');
 		}else {
 			headerEl.removeClass('collapsed');
+			cartEl.removeClass('onCollapsedMenu');
 			headerEl.removeClass('hiddenHeader');
 
 		}
@@ -44,10 +48,11 @@ $(function () {
 	var alignReleaseTitle = function(){
 		if ( $('.releaseItems .item').length ) {
 			var firstItemPos = $('.releaseItems .item').eq(0).position();
-			var releasesPos = $('.releases').eq(0).position();
-			var titlePosition = releasesPos.left-firstItemPos.left-30;
-			$('.releases h3').css('marginLeft', titlePosition+'px');
-			$('.filters').css('marginLeft', titlePosition+'px');
+			var releasesPos = $('.releaseItems').eq(0).position();
+			console.log(releasesPos);
+			var titlePosition = -releasesPos.left+firstItemPos.left+30;
+			$('.albums h3').css('marginLeft', titlePosition+'px');
+			$('.filters').css('marginLeft', titlePosition-15+'px');
 
 		}
 	}
@@ -74,7 +79,7 @@ $(function () {
 		var cartVal = $('#cartTotalPrice');
 		var newVal = price+ parseFloat(cartVal.text());
 		cartVal.text( newVal.toFixed(2) +' €' ); 
-		var cart = $(this).find('.glyphicon-shopping-cart')
+		var cart = $(this).find('.textDescription')
 		var itemCartPos = cart.offset();
 		
 		animatedCart.offset(itemCartPos);
