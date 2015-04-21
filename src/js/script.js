@@ -52,7 +52,7 @@ $(function () {
 			console.log(releasesPos);
 			var titlePosition = -releasesPos.left+firstItemPos.left+30;
 			$('.albums h3').css('marginLeft', titlePosition+'px');
-			$('.filters').css('marginLeft', titlePosition-15+'px');
+			$('.filters').css('marginLeft', titlePosition-7.5+'px');
 
 		}
 	}
