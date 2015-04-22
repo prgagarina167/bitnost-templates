@@ -6954,6 +6954,9 @@ footer:before {
   header.collapsed .pageHeader {
     height: 20px;
   }
+  header.collapsed nav {
+    display: none;
+  }
   header.collapsed h1 {
     padding-left: 8px;
     top: 0;
@@ -6972,6 +6975,9 @@ footer:before {
     border-radius: 0 !important;
     height: 42px;
     padding-top: 10px;
+  }
+  .cartBlock.onCollapsedMenu .cartInfo .infoText {
+    display: none;
   }
   .filters .nav li a {
     padding-left: 6px;
