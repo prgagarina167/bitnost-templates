@@ -6714,7 +6714,7 @@ header.collapsed h1 {
 header.collapsed nav {
   margin-top: 0;
   position: absolute;
-  top: 12px;
+  top: 22px;
   left: 300px;
 }
 /* HEADER */
@@ -6767,6 +6767,9 @@ header.collapsed nav {
 }
 .cartBlock.onCollapsedMenu .cartInfo {
   border-radius: 4px !important;
+}
+.cartBlock.onCollapsedMenu:hover {
+  top: 12px;
 }
 /* END CART INFO*/
 /* BUY LINKS */
