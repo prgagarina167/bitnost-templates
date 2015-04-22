@@ -12,7 +12,11 @@
 		<div class="releases">
 		{{#each this.releases}}
 			<div class="release">
-				<a class="buyLink" href="buy.html"> <span class="type">{{this.type}}</span> <span class="price">{{this.price}}€</span> <span class="xsml" href="buy.html"><span class="textDescription">Add to cart</span></span></a>
+				<a class="buyLink" href="buy.html">
+					<span class="type">{{this.type}}</span>
+					<span class="price">{{this.price}}€</span>
+					<span class="textDescription btn btn-default btn-xs xsmb xsml">buy</span>
+				</a>
 			</div>
 		{{/each}}
 		</div>
