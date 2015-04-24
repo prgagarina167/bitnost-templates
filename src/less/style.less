@@ -13,7 +13,7 @@ h1 {
 }
 
 .popover-content {
-	text-align: center;
+	text-align: center; 
 }
 
 
@@ -21,6 +21,9 @@ h1 {
 
 header {
 	.headOnly {
+		display: none;
+	}
+	nav {
 		display: none;
 	}
 }
@@ -45,10 +48,12 @@ nav ul {
 	padding-left: 0;
 	li {
 		display: inline-block;
-		padding: 0 15px 0 0;
+		padding: 0 8px 0 8px;
 	}
 }
 	header.hiddenHeader {
+		height: 0;
+		overflow: hidden;
 		h1 { 
 			position: relative;
 			top: -2em;
@@ -67,6 +72,7 @@ nav ul {
 	}
 
 	header.collapsed {
+		nav {display: block;}
 		.contents {
 			position: fixed;
 			top: 0;
@@ -179,7 +185,7 @@ nav ul {
 /* END CART INFO*/
 
 /* BUY LINKS */
-.buyLink{
+.release{
 	.type {
 		font-weight: bold;
 		display: inline-block;
@@ -228,7 +234,7 @@ nav ul {
 			.active a {
 				border-color: @brand-primary;
 				border-bottom-color: white;
-				color: #F95825;
+				color: @brand-primary;
 			}
 		}
 	}
@@ -289,10 +295,10 @@ nav ul {
 			}
 		}
 	}
-	.item:hover {
-		.cover {
-			opacity: 0.4;
-		}
+	.cover:hover {
+			img{
+				opacity: 0.4;
+			}
 		.actionButtons{
 			display: block;
 		}
@@ -352,9 +358,11 @@ footer {
 	line-height: 0;
 	position: relative;
 	z-index:2;
-	.content {
+	.copyright {
 		background-color: white;
-		padding: 0 12px;
+		font-size: 12px;
+		padding: 24px;
+		color: lighten(#000, 60%)
 	}
 }
 

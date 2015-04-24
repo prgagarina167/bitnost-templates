@@ -73,14 +73,15 @@ $(function () {
 
 	$(".buyLink").click(function(e){
 		e.preventDefault();
+		//$(this).text('in cart');
 		var mainCartPos = $(".cartInfo .glyphicon-shopping-cart").offset();
 		var itemCountEl = $('#cartInfoItemCount');
 		itemCountEl.text(parseInt(itemCountEl.text())+1);
-		var price = parseFloat($(this).find('.price').text());
+		var price = parseFloat($(this).parent().find('.price').text());
 		var cartVal = $('#cartTotalPrice');
 		var newVal = price+ parseFloat(cartVal.text());
 		cartVal.text( newVal.toFixed(2) +' €' ); 
-		var cart = $(this).find('.textDescription')
+		var cart = $(this).parent().find('.textDescription')
 		var itemCartPos = cart.offset();
 		
 		animatedCart.offset(itemCartPos);
