@@ -2,7 +2,8 @@
   "name": "Bitnost templates",
   "version": "0.1",
   "dependencies": {
-    "bootstrap": "~3.*"
+    "bootstrap": "~3.*",
+    "jquery": "1.*"
   },
   "private": true
 }

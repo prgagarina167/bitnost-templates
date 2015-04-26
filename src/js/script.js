@@ -50,7 +50,6 @@ $(function () {
 		if ( $('.releaseItems .item').length ) {
 			var firstItemPos = $('.releaseItems .item').eq(0).position();
 			var releasesPos = $('.releaseItems').eq(0).position();
-			console.log(releasesPos);
 			var titlePosition = -releasesPos.left+firstItemPos.left+30;
 			$('.albums h3').css('marginLeft', titlePosition+'px');
 			//$('.filters').css('marginLeft', titlePosition-15+'px');

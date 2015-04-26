@@ -6645,6 +6645,7 @@ header nav {
   transition: all 0.25s;
 }
 .pageHeader {
+  margin-top: 50px;
   margin-top: 8vh;
   text-align: center;
 }
@@ -6685,6 +6686,7 @@ header.collapsed nav {
 header.collapsed .contents {
   position: fixed;
   top: 0;
+  background: white;
   background: rgba(255, 255, 255, 0.95);
   z-index: 10;
   right: 0;
