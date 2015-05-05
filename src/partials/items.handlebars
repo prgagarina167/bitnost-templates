@@ -1,25 +1,26 @@
 <div class="item-list">
  {{#each this}}
  <div class="item">
+ 		<a href="release.html">
+
  		<div class="cover smb">
-	 		<a href="release.html">
 			<img src="{{this.cover}}" width=225 height=225 />
-			</a>
 			{{#if this.asFreeMp3}}
 			<div class="freeMp3">+ free mp3</div>
 			{{/if}}
 			<div class="actionButtons lmt">
-				<a class="btn btn-primary xsmb detailsBtn" href="release.html">view details</a>
+				<span class="btn btn-primary xsmb detailsBtn" href="release.html">view details</span>
 			</div>
 		</div>
-		<div class="author"><a href="filter.html?{{this.author}}">{{this.author}}</a></div>
-		<div class="title smb"><a href="release.html">{{this.title}}</a></div>
+		<div class="author">{{this.author}}</div>
+		<div class="title smb">{{this.title}}</div>
+		</a>
 		<div class="releases">
 		{{#each this.releases}}
 			<div class="release">
 					<span class="type">{{this.type}}</span>
 					<span class="price">{{this.price}}€</span>
-					<a class="buyLink textDescription btn btn-default btn-xs xsmb xsml" href="buy.html" >buy</a>
+					<button class="buyLink textDescription btn btn-default xsmb xsml" href="buy.html" >buy</button>
 			</div>
 		{{/each}}
 		</div>

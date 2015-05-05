@@ -71,7 +71,6 @@ $(function () {
 	animatedCart.css('color', '#F95825');
 
 	$(".buyLink").click(function(e){
-		e.preventDefault();
 		//$(this).text('in cart');
 		var mainCartPos = $(".cartInfo .glyphicon-shopping-cart").offset();
 		var itemCountEl = $('#cartInfoItemCount');

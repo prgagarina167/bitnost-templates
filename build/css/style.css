@@ -6752,16 +6752,21 @@ header.collapsed nav {
   padding: 6px 10px 6px 12px;
   color: white;
   border-radius: 0 0 4px 4px;
+  /*.infoText {
+			display: none;
+		}*/
 }
 .cartBlock .cartInfo .glyphicon-shopping-cart {
   padding-left: 4px;
   padding-right: 6px;
 }
-.cartBlock .cartInfo .infoText {
-  display: none;
-}
 .cartBlock .cartInfo:active {
   background-color: #2f8533;
+}
+.cartBlock:hover {
+  /*.infoText {
+		display: inline-block;
+	}*/
 }
 .cartBlock:hover .cartLabel {
   opacity: 0;
@@ -6771,18 +6776,15 @@ header.collapsed nav {
   background-color: #3cab42;
   text-decoration: none;
 }
-.cartBlock:hover .infoText {
-  display: inline-block;
-}
 .cartBlock.onCollapsedMenu {
   top: 22px;
 }
 .cartBlock.onCollapsedMenu .cartInfo {
   border-radius: 4px !important;
 }
-.cartBlock.onCollapsedMenu:hover {
-  top: 12px;
-}
+/*.cartBlock.onCollapsedMenu:hover {
+	top: 12px;
+}*/
 /* END CART INFO*/
 /* BUY LINKS */
 .release .type {
@@ -6794,6 +6796,7 @@ header.collapsed nav {
   min-width: 3em;
   display: inline-block;
   text-align: right;
+  font-size: 15px;
 }
 .release .textDescription {
   color: #666;
@@ -6992,9 +6995,9 @@ footer:before {
     border-radius: 0 !important;
     height: 42px;
     padding-top: 10px;
-  }
-  .cartBlock.onCollapsedMenu .cartInfo .infoText {
-    display: none;
+    /*.infoText {
+				display: none;
+			}*/
   }
   .filters .nav li a {
     padding-left: 6px;

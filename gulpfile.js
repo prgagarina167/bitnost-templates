@@ -75,7 +75,7 @@ gulp.task('handlebars', function(){
 
   for(var i = 0; i < albumCount; i++ ){
     releaseTypes.sort( function() { return 0.5 - Math.random() } );
-    var releaseCount = Math.floor((Math.random() * releaseTypes.length) + 1);
+    var releaseCount = Math.floor((Math.random() * 3) + 1);
     genresNames.sort( function() { return 0.5 - Math.random() } );
     var genresCount = Math.floor((Math.random() * genresNames.length) + 1);
     var releases = []
