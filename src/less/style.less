@@ -1,6 +1,9 @@
 @import "bootstrap.less";
 @import "utilities.less";
 
+
+@maxScreenSize: 1300px;
+
 body {
 	margin: 0 100px 0;  
 }
@@ -14,6 +17,10 @@ h1 {
 
 .popover-content {
 	text-align: center; 
+}
+
+.container-fluid, .filters {
+	max-width: @maxScreenSize;
 }
 
 
@@ -215,18 +222,12 @@ nav ul {
 
 /* ITEMS */
 
-.releaseItems {
-	margin-left: -80px;
-	margin-right: -80px;
-}
-
 .albums {
 	margin-top: 40px;
 	.filters {
-		position: absolute; 
 		z-index: 2;
-		left: 5%;
-		right: 5%;
+		margin-left: auto;
+		margin-right: auto;
 		.nav-tabs {
 			text-align: center;
 			border-color: @brand-primary;
@@ -244,6 +245,9 @@ nav ul {
 }
 
 .releaseItems{ 
+	margin-left: -80px;
+	margin-right: -80px;
+	//max-width: (225px + 12px + 12px)*5 + 24px;
 	font-size: 0;
 	text-align: center;
 	position: relative;
@@ -379,7 +383,7 @@ footer:before {
 /* Media Queries */
 @media(max-width: @screen-xs-max) {
 	body { margin: 12px;}
-	.home .releaseItems { margin-left: 0; margin-right: 0;}
+	.releaseItems { margin-left: 0; margin-right: 0;}
 
 	header.collapsed .pageHeader { height: 20px; }
 	header.collapsed nav {display: none;}
@@ -409,6 +413,8 @@ footer:before {
 		font-size: 12px;
 	}
 }
+
+
 //small and up
 @media(min-width: @screen-sm-min) {
 

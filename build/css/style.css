@@ -6631,6 +6631,10 @@ h1 {
 .popover-content {
   text-align: center;
 }
+.container-fluid,
+.filters {
+  max-width: 1300px;
+}
 /* HEADER */
 header .headOnly {
   display: none;
@@ -6811,18 +6815,13 @@ header.collapsed nav {
 }
 /* END BUY LINKS */
 /* ITEMS */
-.releaseItems {
-  margin-left: -80px;
-  margin-right: -80px;
-}
 .albums {
   margin-top: 40px;
 }
 .albums .filters {
-  position: absolute;
   z-index: 2;
-  left: 5%;
-  right: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .albums .filters .nav-tabs {
   text-align: center;
@@ -6838,6 +6837,8 @@ header.collapsed nav {
   color: #56c45c;
 }
 .releaseItems {
+  margin-left: -80px;
+  margin-right: -80px;
   font-size: 0;
   text-align: center;
   position: relative;
@@ -6967,7 +6968,7 @@ footer:before {
   body {
     margin: 12px;
   }
-  .home .releaseItems {
+  .releaseItems {
     margin-left: 0;
     margin-right: 0;
   }
